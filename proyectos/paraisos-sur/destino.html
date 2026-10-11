@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17322b">
+<title>Destino — Paraísos Sur</title>
+<link rel="icon" type="image/png" href="../../assets/icons/ps/mountain-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ps.css?v=4">
+</head>
+<body>
+<header class="nav-bar">
+  <div class="wrap">
+    <a class="logo" href="index.html" data-logo aria-label="Paraísos Sur, inicio"><span class="logo-txt"><b>Paraísos Sur</b><small>Patagonia guiada</small></span></a>
+    <nav class="links" aria-label="Principal">
+      <a href="index.html#destinos">Destinos</a><a href="index.html#experiencias">Experiencias</a><a href="index.html#paquetes">Paquetes</a><a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-amber" href="#cotizar">Cotizar este viaje</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><img class="lt" src="../../assets/icons/ps/menu-l.png" alt=""><img class="dk" src="../../assets/icons/ps/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="d-hero">
+    <img id="heroImg" src="" alt="">
+    <div class="wrap">
+      <nav class="d-crumb" aria-label="Ruta"><a href="index.html">Inicio</a><img src="../../assets/icons/ps/chevron-right-l.png" alt=""><a href="index.html#destinos">Destinos</a><img src="../../assets/icons/ps/chevron-right-l.png" alt=""><span id="crumbName"></span></nav>
+      <span class="eyebrow" id="region"></span>
+      <h1 id="name"></h1>
+      <p id="tagline"></p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="facts-bar" id="facts"></div>
+  </div>
+
+  <section class="section wrap d-layout" style="padding-top:70px">
+    <div class="d-main">
+      <span class="eyebrow">El destino</span>
+      <h2>Lo que vas a vivir</h2>
+      <p class="lead" id="intro"></p>
+      <div class="d-gallery" id="gallery"></div>
+
+      <span class="eyebrow">Imperdibles</span>
+      <h2>Lo más destacado</h2>
+      <div class="hl" id="highlights"></div>
+
+      <span class="eyebrow">Itinerario sugerido</span>
+      <h2>Paso a paso</h2>
+      <ol class="timeline" id="itinerary"></ol>
+
+      <span class="eyebrow">Ubicación</span>
+      <h2>Cómo llegar</h2>
+      <div class="d-map"><iframe id="map" title="Mapa del destino" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+      <span class="eyebrow">Equipaje</span>
+      <h2>Qué llevar</h2>
+      <ul class="bring" id="bring"></ul>
+    </div>
+
+    <aside class="d-aside" id="cotizar">
+      <span class="from">Valor referencial desde</span>
+      <div class="amt" id="price"></div>
+      <span class="unit">por persona · demostración</span>
+      <form class="qform" id="qform">
+        <label>Nombre<input name="name" required autocomplete="name"></label>
+        <div class="two">
+          <label>Fecha tentativa<input type="date" name="date" id="qDate" required></label>
+          <label>Viajeros<select name="people"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+        </div>
+        <label>Paquete<select name="pack" id="qPack"></select></label>
+        <button class="btn btn-wa block" type="submit"><img src="../../assets/icons/whatsapp-white.png" alt="">Cotizar por WhatsApp</button>
+      </form>
+      <p class="aside-note">Te respondemos con disponibilidad, punto de salida y valor final. Sin compromiso.</p>
+    </aside>
+  </section>
+
+  <section class="section wrap" style="padding-top:0">
+    <div class="head-row"><div><span class="eyebrow">Sigue explorando</span><h2>Otros destinos <em>del sur</em></h2></div><a class="btn btn-outline" href="index.html#destinos">Ver todos</a></div>
+    <div class="others" id="others"></div>
+  </section>
+</main>
+
+<footer class="footer" style="padding-top:20px">
+  <div class="wrap"><div class="f-bottom" style="margin-top:0"><span>© <span id="year"></span> Paraísos Sur · Proyecto de demostración. Itinerarios y valores referenciales.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div></div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería ampliada">
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar"><img src="../../assets/icons/ps/x-l.png" alt=""></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior"><img src="../../assets/icons/ps/chevron-left-l.png" alt=""></button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente"><img src="../../assets/icons/ps/chevron-right-l.png" alt=""></button>
+</div>
+
+<script src="js/data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+<script>
+mountShell();
+const d = PS_DESTINOS.find(x => x.id === new URLSearchParams(location.search).get("lugar")) || PS_DESTINOS[0];
+document.title = `${d.name} — Paraísos Sur`;
+$("#heroImg").src = d.images[0]; $("#heroImg").alt = d.name;
+$("#crumbName").textContent = d.name;
+$("#region").textContent = `${d.region} · ${d.country}`;
+$("#name").textContent = d.name;
+$("#tagline").textContent = d.tagline;
+$("#intro").textContent = d.intro;
+$("#price").textContent = clp(d.price);
+
+const facts = [["sun", "Mejor época", d.facts.season], ["clock", "Duración", d.facts.duration], ["gauge", "Dificultad", d.facts.level], ["map-pin", "Salida", d.facts.from]];
+$("#facts").innerHTML = facts.map(([ic, k, v]) => `<div><img src="${PIC}${ic}-a.png" alt=""><div><small>${k}</small><span>${v}</span></div></div>`).join("");
+$("#highlights").innerHTML = d.highlights.map(h => `<div><img src="${PIC}check-a.png" alt=""><span>${h}</span></div>`).join("");
+$("#itinerary").innerHTML = d.itinerary.map(([t, h, p]) => `<li class="tl"><b>${t}</b><h3>${h}</h3><p>${p}</p></li>`).join("");
+$("#bring").innerHTML = d.bring.map(b => `<li><img src="${PIC}backpack-a.png" alt="">${b}</li>`).join("");
+$("#qPack").innerHTML = [`Excursión a ${d.name}`, ...PS_PAQUETES.map(p => p.name), "Viaje a medida"].map(o => `<option>${o}</option>`).join("");
+$("#map").src = `https://maps.google.com/maps?q=${encodeURIComponent(d.map)}&z=${d.zoom || 10}&output=embed`;
+$("#qDate").min = new Date().toISOString().slice(0, 10);
+
+/* Galería + lightbox */
+$("#gallery").innerHTML = d.images.map((src, i) => `<button data-i="${i}" aria-label="Ampliar foto ${i + 1}"><img src="${src}" alt="${d.name}, foto ${i + 1}" loading="lazy"></button>`).join("");
+let li = 0;
+const lbShow = i => { li = (i + d.images.length) % d.images.length; $("#lbImg").src = d.images[li]; $("#lbImg").alt = `${d.name}, foto ${li + 1}`; };
+$("#gallery").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (!b) return; lbShow(Number(b.dataset.i)); $("#lb").classList.add("open"); });
+$("#lbClose").onclick = () => $("#lb").classList.remove("open");
+$("#lbPrev").onclick = () => lbShow(li - 1);
+$("#lbNext").onclick = () => lbShow(li + 1);
+$("#lb").addEventListener("click", e => { if (e.target.id === "lb") $("#lb").classList.remove("open"); });
+document.addEventListener("keydown", e => {
+  if (!$("#lb").classList.contains("open")) return;
+  if (e.key === "Escape") $("#lb").classList.remove("open");
+  if (e.key === "ArrowLeft") lbShow(li - 1);
+  if (e.key === "ArrowRight") lbShow(li + 1);
+});
+
+/* Cotización */
+$("#qform").addEventListener("submit", e => {
+  e.preventDefault();
+  const q = Object.fromEntries(new FormData(e.target));
+  const fecha = new Date(q.date + "T12:00").toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
+  window.open(wa(`Hola Paraísos Sur, quiero cotizar un viaje.\n\nDestino: ${d.name}\nPaquete: ${q.pack}\nFecha tentativa: ${fecha}\nViajeros: ${q.people}\nNombre: ${q.name}\n\n¿Me envían disponibilidad y valor?`), "_blank", "noopener");
+});
+
+$("#others").innerHTML = PS_DESTINOS.filter(x => x.id !== d.id).slice(0, 3).map(destCard).join("");
+</script>
+</body>
+</html>

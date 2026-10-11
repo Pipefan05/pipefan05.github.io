@@ -1,0 +1,92 @@
+/* ZONA SPORT — catálogo de demostración.
+   Un solo listado compartido por index.html y producto.html.
+   Precios en CLP, ilustrativos. Imágenes locales en assets/img/zona-sport. */
+const ZS_CONFIG = {
+  whatsapp: "56952262331",          // código país + número, sin + ni espacios
+  freeShippingFrom: 50000,          // umbral de envío gratis (demo)
+  cartKey: "zonaSportCartV2",
+  favKey: "zonaSportFavV1"
+};
+
+const IMG = "../../assets/img/zona-sport/";
+const gallery = (slug, n) => Array.from({ length: n }, (_, i) => `${IMG}${slug}-${i + 1}.jpg`);
+
+const ZS_PRODUCTS = [
+  { id: 1, slug: "botines", name: "Botines Strike Pro FG", category: "Fútbol", price: 54990, oldPrice: 64990, badge: "Más vendido", rating: 4.8, reviews: 126,
+    images: gallery("botines", 4), short: "Botín para césped natural con capellada ligera y tapones cónicos.",
+    description: "Diseñados para jugadores rápidos que buscan control y tracción. La capellada sintética se ajusta al pie desde el primer uso y la suela FG distribuye la presión para giros explosivos en césped natural.",
+    features: ["Capellada sintética con textura de control", "Suela FG para césped natural", "Plantilla acolchada removible", "Peso aproximado: 210 g (talla 41)"],
+    variants: { label: "Talla (EU)", options: ["38", "39", "40", "41", "42", "43", "44"] } },
+  { id: 2, slug: "running", name: "Zapatillas Pulse Run", category: "Running", price: 64990, badge: "Nuevo", rating: 4.7, reviews: 88,
+    images: gallery("running", 4), short: "Amortiguación reactiva para rodajes diarios y medias distancias.",
+    description: "Una zapatilla de running versátil con espuma de alto retorno y upper de malla transpirable. Pensada para sumar kilómetros con comodidad, desde el trote suave hasta el ritmo de carrera.",
+    features: ["Espuma de alto retorno de energía", "Upper de malla transpirable", "Drop de 8 mm", "Suela de caucho con zonas de desgaste reforzadas"],
+    variants: { label: "Talla (EU)", options: ["37", "38", "39", "40", "41", "42", "43", "44", "45"] } },
+  { id: 3, slug: "training", name: "Zapatillas Flex Train", category: "Entrenamiento", price: 49990, rating: 4.6, reviews: 54,
+    images: gallery("training", 3), short: "Base estable para levantamiento, HIIT y trabajo funcional.",
+    description: "Base ancha y plana para sentir el suelo en sentadillas y levantamientos, con flexibilidad en el antepié para saltos y cambios de dirección en clases funcionales.",
+    features: ["Talón estable de baja altura", "Antepié flexible", "Refuerzos laterales para desplazamientos", "Suela antideslizante para gimnasio"],
+    variants: { label: "Talla (EU)", options: ["37", "38", "39", "40", "41", "42", "43", "44"] } },
+  { id: 4, slug: "pelota", name: "Pelota Match Pro N.º 5", category: "Fútbol", price: 19990, rating: 4.9, reviews: 203,
+    images: gallery("pelota", 4), short: "Pelota termosellada de vuelo estable para partido y entrenamiento.",
+    description: "Paneles termosellados que reducen la absorción de agua y mantienen la forma partido tras partido. Cámara de butilo para una mejor retención de aire.",
+    features: ["Paneles termosellados", "Cámara de butilo", "Tamaño oficial N.º 5", "Apta para césped natural y sintético"],
+    variants: { label: "Tamaño", options: ["N.º 3", "N.º 4", "N.º 5"] } },
+  { id: 5, slug: "arquero", name: "Guantes de arquero Grip", category: "Fútbol", price: 24990, badge: "Destacado", rating: 4.5, reviews: 41,
+    images: gallery("arquero", 3), short: "Palma de látex de 4 mm y corte negativo para máximo agarre.",
+    description: "Guantes con palma de látex de alto agarre y corte negativo, que acerca la superficie de contacto al balón. Cierre de muñeca ajustable para mayor sujeción.",
+    features: ["Látex de 4 mm", "Corte negativo", "Muñequera elástica con velcro", "Recomendado: humedecer la palma antes de usar"],
+    variants: { label: "Talla", options: ["7", "8", "9", "10", "11"] } },
+  { id: 6, slug: "camiseta", name: "Polera Dry-Tech", category: "Indumentaria", price: 17990, rating: 4.6, reviews: 97,
+    images: gallery("camiseta", 3), short: "Tejido liviano de secado rápido para entrenar y competir.",
+    description: "Polera técnica de tejido liviano que aleja la humedad de la piel. Costuras planas para evitar roces durante sesiones largas.",
+    features: ["Secado rápido", "Costuras planas", "Corte regular", "100% poliéster reciclado"],
+    variants: { label: "Talla", options: ["XS", "S", "M", "L", "XL", "XXL"] } },
+  { id: 7, slug: "shorts", name: "Short Running Air", category: "Indumentaria", price: 15990, rating: 4.4, reviews: 36,
+    images: gallery("shorts", 3), short: "Short de 5\" con calza interior y bolsillo para llaves.",
+    description: "Liviano y con aberturas laterales para libertad de movimiento. Incluye calza interior y un bolsillo trasero con cierre.",
+    features: ["Largo de 5 pulgadas", "Calza interior", "Bolsillo trasero con cierre", "Detalles reflectantes"],
+    variants: { label: "Talla", options: ["S", "M", "L", "XL"] } },
+  { id: 8, slug: "hoodie", name: "Polerón Essential", category: "Indumentaria", price: 32990, badge: "Esencial", rating: 4.8, reviews: 112,
+    images: gallery("hoodie", 3), short: "Algodón perchado para antes y después de entrenar.",
+    description: "Polerón con capucha de algodón perchado, cómodo y abrigado. Bolsillo canguro y puños acanalados.",
+    features: ["Algodón perchado 320 g/m²", "Capucha con cordón", "Bolsillo canguro", "Puños y pretina acanalados"],
+    variants: { label: "Talla", options: ["XS", "S", "M", "L", "XL", "XXL"] } },
+  { id: 9, slug: "mancuernas", name: "Set de mancuernas hexagonales", category: "Entrenamiento", price: 39990, rating: 4.7, reviews: 64,
+    images: gallery("mancuernas", 4), short: "Par de mancuernas con recubrimiento de goma y mango moleteado.",
+    description: "Formato hexagonal que evita que rueden. Recubrimiento de goma que protege el suelo y mango cromado con moleteado para un agarre firme.",
+    features: ["Se venden por par", "Recubrimiento de goma", "Mango cromado moleteado", "Forma hexagonal antirrodadura"],
+    variants: { label: "Peso por unidad", options: ["2,5 kg", "5 kg", "7,5 kg", "10 kg"] } },
+  { id: 10, slug: "yoga", name: "Mat de yoga Balance 6 mm", category: "Entrenamiento", price: 22990, rating: 4.6, reviews: 58,
+    images: gallery("yoga", 4), short: "Superficie antideslizante y 6 mm de amortiguación.",
+    description: "Mat de TPE con doble textura: adherencia en la cara superior y agarre al suelo en la inferior. Incluye correa de transporte.",
+    features: ["Grosor de 6 mm", "Material TPE libre de PVC", "183 × 61 cm", "Correa de transporte incluida"],
+    variants: { label: "Color", options: ["Verde salvia", "Grafito", "Arena"] } },
+  { id: 11, slug: "cuerda", name: "Cuerda de saltar Speed", category: "Entrenamiento", price: 8990, rating: 4.3, reviews: 29,
+    images: gallery("cuerda", 4), short: "Cable ajustable y rodamientos para giros rápidos.",
+    description: "Ideal para cardio, calentamientos y dobles saltos. Cable regulable en largo y mangos livianos con rodamientos.",
+    features: ["Largo ajustable hasta 3 m", "Rodamientos en los mangos", "Mangos antideslizantes", "Bolsa de guardado"],
+    variants: { label: "Color", options: ["Naranja", "Negro"] } },
+  { id: 12, slug: "guantes", name: "Guantes de boxeo Fight", category: "Entrenamiento", price: 34990, rating: 4.7, reviews: 47,
+    images: gallery("guantes", 4), short: "Espuma multicapa y cierre de velcro para saco y sparring.",
+    description: "Guantes con espuma multicapa que distribuye el impacto, palma ventilada y cierre de velcro amplio para un ajuste seguro de la muñeca.",
+    features: ["Espuma multicapa", "Palma con malla de ventilación", "Cierre de velcro", "Uso: saco, manoplas y sparring"],
+    variants: { label: "Peso", options: ["10 oz", "12 oz", "14 oz", "16 oz"] } },
+  { id: 13, slug: "botella", name: "Botella térmica Active", category: "Accesorios", price: 14990, rating: 4.8, reviews: 140,
+    images: gallery("botella", 4), short: "Acero inoxidable de doble pared: frío 24 h, calor 12 h.",
+    description: "Botella reutilizable de acero inoxidable con aislamiento al vacío. Tapa hermética con asa para llevarla al gimnasio, la cancha o el trabajo.",
+    features: ["Doble pared al vacío", "Libre de BPA", "Tapa hermética con asa", "No apta para lavavajillas"],
+    variants: { label: "Capacidad", options: ["500 ml", "750 ml", "1 litro"] } },
+  { id: 14, slug: "mochila", name: "Mochila Urban Sport 25 L", category: "Accesorios", price: 29990, rating: 4.6, reviews: 73,
+    images: gallery("mochila", 4), short: "Compartimento para zapatillas y bolsillo para notebook.",
+    description: "Mochila para el día a día y el gimnasio. Compartimento ventilado para calzado, bolsillo acolchado para notebook de hasta 15\" y tela resistente al agua.",
+    features: ["Capacidad 25 litros", "Compartimento para calzado", "Bolsillo para notebook 15\"", "Tela repelente al agua"],
+    variants: { label: "Color", options: ["Negro", "Gris", "Azul marino"] } },
+  { id: 15, slug: "reloj", name: "Reloj deportivo Pace", category: "Accesorios", price: 89990, oldPrice: 99990, badge: "Oferta", rating: 4.5, reviews: 52,
+    images: gallery("reloj", 4), short: "Frecuencia cardíaca, GPS y registro de entrenamientos.",
+    description: "Reloj deportivo con sensor de frecuencia cardíaca, GPS integrado y modos de entrenamiento para correr, nadar y entrenar en gimnasio.",
+    features: ["GPS integrado", "Sensor de frecuencia cardíaca", "Resistente al agua 5 ATM", "Batería de hasta 7 días"],
+    variants: { label: "Correa", options: ["Negra", "Blanca"] } }
+];
+
+const ZS_CATEGORIES = ["Fútbol", "Running", "Entrenamiento", "Indumentaria", "Accesorios"];

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f4f0">
+<title>Caso de estudio — Felipe Antunez Mardones</title>
+<link rel="icon" type="image/png" href="assets/icons/pf/code-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:ital,wght@0,800;1,800&family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/portfolio.css?v=4">
+<link rel="stylesheet" href="assets/css/caso.css?v=4">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Felipe Antunez Mardones, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#111315"/><text x="19" y="27.5" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-style="italic" font-size="22" fill="#fff">fa</text><circle cx="30.5" cy="26.5" r="2.2" fill="#b08d57"/></svg>
+      <span class="brand-txt"><b>Felipe Antunez Mardones</b><small>Diseño y desarrollo web</small></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="index.html#proyectos">Proyectos</a><a href="index.html#servicios">Servicios</a><a href="index.html#proceso">Proceso</a><a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a class="btn btn-ink" href="index.html#contacto">Cotizar mi web <img src="assets/icons/pf/arrow-up-right-l.png" alt=""></a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><img src="assets/icons/pf/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap c-head">
+    <a class="back" href="index.html#proyectos"><img src="assets/icons/pf/arrow-left-d.png" alt="">Todos los proyectos</a>
+    <span class="label"><i></i><span id="sector"></span></span>
+    <h1 id="title"></h1>
+    <p class="c-lead" id="lead"></p>
+    <dl class="c-meta">
+      <div><dt>Rol</dt><dd>Diseño UX/UI y desarrollo front-end</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+      <div><dt>Tipo</dt><dd id="kind"></dd></div>
+      <div><dt>Tecnología</dt><dd>HTML · CSS · JavaScript</dd></div>
+    </dl>
+    <div class="c-actions"><a class="btn btn-ink" id="live" href="#">Ver sitio en vivo <img src="assets/icons/pf/arrow-up-right-l.png" alt=""></a></div>
+  </section>
+
+  <section class="wrap">
+    <div class="shot-desk" id="heroShot">
+      <div class="win-bar"><i></i><i></i><i></i><span id="url"></span></div>
+      <img id="deskImg" src="" alt="">
+    </div>
+  </section>
+
+  <section class="wrap c-two">
+    <div><span class="label"><i></i>El desafío</span><p id="challenge"></p></div>
+    <div><span class="label"><i></i>La solución</span><p id="solution"></p></div>
+  </section>
+
+  <section class="wrap c-system">
+    <div class="sys-box">
+      <h2>Paleta de color</h2>
+      <div class="swatches" id="swatches"></div>
+    </div>
+    <div class="sys-box">
+      <h2>Tipografía</h2>
+      <div id="fonts"></div>
+    </div>
+  </section>
+
+  <section class="c-phones">
+    <div class="wrap">
+      <div class="sec-top"><div><span class="label"><i></i>Versión móvil</span><h2>Pensado <span class="serif">primero para el celular.</span></h2></div><p>La mayoría de los clientes de un pequeño negocio llegan desde el teléfono. Cada pantalla se diseñó para leerse y usarse con una mano.</p></div>
+      <div class="phones" id="phones"></div>
+    </div>
+  </section>
+
+  <section class="wrap c-features">
+    <div class="sec-top"><div><span class="label"><i></i>Funcionalidades</span><h2>Lo que incluye <span class="serif">el proyecto.</span></h2></div></div>
+    <div class="feat-grid" id="features"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="shot-desk">
+      <div class="win-bar"><i></i><i></i><i></i><span id="url2"></span></div>
+      <img id="deskImg2" src="" alt="" loading="lazy">
+    </div>
+    <p class="caption" id="cap2"></p>
+  </section>
+
+  <section class="wrap next" id="nextBox"></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-bottom"><span>© <span id="year"></span> Felipe Antunez Mardones.</span><span>Proyecto de demostración con marca ficticia. Fotografías: Unsplash.</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp"><img src="assets/icons/whatsapp-badge.png" alt=""><span class="wa-tip">¿Hablamos por WhatsApp?</span></a>
+
+<script>
+const CASES = {
+  "zona-sport": {
+    title: "Zona Sport", sector: "Comercio electrónico", kind: "Tienda online", url: "zonasport.cl", live: "proyectos/zona-sport/index.html",
+    lead: "Una tienda deportiva con la energía de una marca de performance: catálogo con filtros, fichas de producto completas y pedidos que llegan ordenados a WhatsApp.",
+    challenge: "Las tiendas pequeñas suelen vender por Instagram y WhatsApp, respondiendo uno a uno precios, tallas y stock. El objetivo era un catálogo que resolviera esas preguntas antes del primer mensaje y que se sintiera tan profesional como una gran marca deportiva.",
+    solution: "Diseñé una identidad oscura con acento lima y tipografía condensada, inspirada en marcas de running y fútbol. Cada producto tiene galería, variantes y guía de tallas; el carrito suma tallas y cantidades, muestra cuánto falta para el envío gratis y arma el pedido completo para WhatsApp.",
+    colors: [["#0C0D0A", "Negro cancha"], ["#C6F432", "Lima"], ["#14160F", "Grafito"], ["#F4F5EF", "Tiza"], ["#FF5A3C", "Oferta"]],
+    fonts: [["Barlow Condensed", "800", "italic", "uppercase", "Títulos"], ["Inter", "400", "normal", "none", "Textos y botones"]],
+    phones: ["zona-sport-movil", "zona-sport-producto-movil"],
+    detail: "zona-sport-producto-desktop", detailUrl: "zonasport.cl/producto", detailCap: "Ficha de producto: galería, tallas, guía de medidas, productos relacionados y botón directo a WhatsApp.",
+    features: [["store", "Catálogo de 15 productos", "Filtros por deporte, búsqueda en vivo y orden por precio o valoración."], ["layers", "Fichas completas", "Galería con miniaturas, variantes, cantidad y guía de tallas."], ["message-circle", "Pedido por WhatsApp", "El carrito envía productos, tallas, cantidades y total en un solo mensaje."], ["zap", "Envío gratis visible", "Barra de progreso que incentiva a completar el monto mínimo."], ["smartphone", "Compra móvil", "Barra de compra fija y menú adaptado en el celular."], ["sparkles", "Favoritos", "Los clientes guardan productos para volver más tarde."]]
+  },
+  "mesa-noble": {
+    title: "Mesa Noble", sector: "Gastronomía", kind: "Sitio de restaurante", url: "mesanoble.com.ar", live: "proyectos/mesa-noble/index.html",
+    lead: "Un sitio editorial para un restaurante de autor, con una carta que se lee como un menú impreso, reservas y pedidos para retirar.",
+    challenge: "Un restaurante de cocina de autor necesitaba transmitir calidez y cuidado por el detalle, mostrar su carta actualizada y recibir reservas y pedidos sin depender de aplicaciones de terceros que cobran comisión.",
+    solution: "Construí una dirección visual cálida con serif clásica, tonos crema y terracota, y fotografía protagonista. La carta funciona como un menú impreso con fichas por plato (maridaje y alérgenos). Las reservas y el pedido para retirar se resuelven en dos pasos y se confirman por WhatsApp.",
+    colors: [["#F4EDE1", "Crema"], ["#9C4F30", "Terracota"], ["#2A2620", "Carbón"], ["#4F5A3C", "Oliva"], ["#E8DCCB", "Arena"]],
+    fonts: [["Cormorant Garamond", "500", "italic", "none", "Títulos"], ["Jost", "400", "normal", "none", "Textos y menú"]],
+    phones: ["mesa-noble-movil", "mesa-noble-plato-movil"],
+    detail: "mesa-noble-plato-desktop", detailUrl: "mesanoble.com.ar/plato", detailCap: "Ficha de plato: galería, maridaje sugerido, alérgenos y tiempo de preparación para retirar.",
+    features: [["utensils-crossed", "Carta interactiva", "Secciones por tiempos con fotos, precios y etiquetas."], ["calendar", "Reservas", "Fecha, horario y cantidad de personas, confirmadas por WhatsApp."], ["shopping-bag", "Pedido para retirar", "Panel de pedido y formulario de retiro en dos pasos."], ["chef-hat", "Equipo y filosofía", "Presentación de la cocina y de quienes la hacen."], ["wine", "Menú degustación", "Experiencia de siete tiempos con opción de maridaje."], ["map-pin", "Ubicación y horarios", "Mapa integrado, horarios y contacto para eventos."]]
+  },
+  "paraisos-sur": {
+    title: "Paraísos Sur", sector: "Turismo", kind: "Sitio de agencia de viajes", url: "paraisossur.cl", live: "proyectos/paraisos-sur/index.html",
+    lead: "Un sitio para una agencia de viajes guiados por la Patagonia chilena y argentina, con buscador de destinos, itinerarios y cotización directa.",
+    challenge: "Las agencias pequeñas compiten con grandes plataformas de turismo. Había que mostrar los destinos con la fuerza visual que merecen y transmitir confianza: qué incluye cada viaje, cómo es el itinerario y cuándo conviene ir.",
+    solution: "Apliqué una línea editorial de revista de viajes: fotografía a pantalla completa, serif suave y paleta verde bosque con ámbar. Cada destino tiene galería ampliable, datos clave, itinerario paso a paso, mapa y un formulario que arma la cotización para WhatsApp.",
+    colors: [["#17322B", "Bosque"], ["#D98B3A", "Ámbar"], ["#F6F3EC", "Hueso"], ["#4C6B4F", "Musgo"], ["#E9E3D6", "Piedra"]],
+    fonts: [["Fraunces", "500", "italic", "none", "Títulos"], ["DM Sans", "400", "normal", "none", "Textos y formularios"]],
+    phones: ["paraisos-sur-movil", "paraisos-sur-destino-movil"],
+    detail: "paraisos-sur-destino-desktop", detailUrl: "paraisossur.cl/destino", detailCap: "Página de destino: datos clave, galería, itinerario, mapa y formulario de cotización.",
+    features: [["search", "Buscador de viajes", "Filtra por país, tipo de experiencia y duración."], ["map", "6 destinos", "Galería ampliable, imperdibles y qué llevar en cada uno."], ["calendar", "Itinerarios", "Línea de tiempo con horarios o días de viaje."], ["layers", "Paquetes comparables", "Tres propuestas con lo que incluye cada una."], ["sun", "Guía de temporadas", "Qué ofrece el sur en cada estación del año."], ["message-circle", "Cotización directa", "Formulario que envía destino, fecha y viajeros por WhatsApp."]]
+  }
+};
+const ORDER = ["zona-sport", "mesa-noble", "paraisos-sur"];
+const $ = s => document.querySelector(s);
+const key = CASES[new URLSearchParams(location.search).get("p")] ? new URLSearchParams(location.search).get("p") : "zona-sport";
+const c = CASES[key], CAP = "assets/img/capturas/";
+
+document.title = `${c.title} — Caso de estudio · Felipe Antunez Mardones`;
+$("#sector").textContent = c.sector; $("#title").textContent = c.title; $("#lead").textContent = c.lead; $("#kind").textContent = c.kind;
+$("#live").href = c.live; $("#url").textContent = c.url; $("#url2").textContent = c.detailUrl;
+$("#deskImg").src = `${CAP}${key}-desktop.jpg`; $("#deskImg").alt = `Página de inicio de ${c.title} en escritorio`;
+$("#deskImg2").src = `${CAP}${c.detail}.jpg`; $("#deskImg2").alt = c.detailCap; $("#cap2").textContent = c.detailCap;
+$("#challenge").textContent = c.challenge; $("#solution").textContent = c.solution;
+$("#swatches").innerHTML = c.colors.map(([hex, n]) => `<div class="sw"><span style="background:${hex}"></span><b>${n}</b><code>${hex}</code></div>`).join("");
+$("#fonts").innerHTML = c.fonts.map(([f, w, st, tt, use]) => `<div class="font"><span class="aa" style="font-family:'${f}';font-weight:${w};font-style:${st};text-transform:${tt}">Aa</span><div><b>${f}</b><small>${use}</small><span class="sample" style="font-family:'${f}';font-weight:${w};font-style:${st};text-transform:${tt}">Diseño que comunica</span></div></div>`).join("");
+$("#phones").innerHTML = [...c.phones, `${key}-movil`].slice(0, 2).map((p, i) => `<figure class="phone"><img src="${CAP}${p}.jpg" alt="${c.title} en celular, pantalla ${i + 1}" loading="lazy"></figure>`).join("")
+  + `<div class="phone-copy"><img src="assets/icons/pf/smartphone-a.png" alt=""><h3>Navegación con el pulgar</h3><p>Botones grandes, menú desplegable, textos legibles sin hacer zoom y WhatsApp siempre a mano.</p><a class="btn btn-line" href="${c.live}">Probar en tu celular <img src="assets/icons/pf/arrow-up-right-d.png" alt=""></a></div>`;
+$("#features").innerHTML = c.features.map(([ic, h, p]) => `<article class="fcard"><div class="svc-ico"><img src="assets/icons/pf/${ic}-d.png" alt=""></div><h3>${h}</h3><p>${p}</p></article>`).join("");
+const nk = ORDER[(ORDER.indexOf(key) + 1) % ORDER.length], n = CASES[nk];
+$("#nextBox").innerHTML = `<a class="next-link" href="caso.html?p=${nk}"><span class="label"><i></i>Siguiente proyecto</span><strong>${n.title}</strong><span class="next-sub">${n.sector} <img src="assets/icons/pf/arrow-right-d.png" alt=""></span><img class="next-img" src="${CAP}${nk}-desktop.jpg" alt="" loading="lazy"></a>`;
+
+const WA = "56952262331";
+$("#waFloat").href = `https://wa.me/${WA}?text=${encodeURIComponent(`Hola Felipe, vi el proyecto ${c.title} y quiero una web parecida para mi negocio.`)}`;
+$("#year").textContent = new Date().getFullYear();
+const topBar = $("#top"); addEventListener("scroll", () => topBar.classList.toggle("scrolled", scrollY > 10), { passive: true });
+const burger = $("#burger"); burger.onclick = () => burger.setAttribute("aria-expanded", document.body.classList.toggle("nav-open"));
+</script>
+</body>
+</html>

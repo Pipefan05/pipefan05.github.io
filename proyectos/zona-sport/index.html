@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0d0a">
+<meta name="description" content="Zona Sport: calzado, indumentaria y equipamiento deportivo para fútbol, running y entrenamiento. Compra simple con atención por WhatsApp.">
+<title>Zona Sport — Equipamiento deportivo</title>
+<link rel="icon" type="image/png" href="../../assets/icons/zs/zap-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/zs.css?v=4">
+</head>
+<body>
+<a class="skip" href="#catalogo">Saltar al catálogo</a>
+
+<div class="promo" aria-label="Anuncios">
+  <div class="promo-track">
+    <span><img src="../../assets/icons/zs/truck-d.png" alt="">Envío gratis desde $50.000</span>
+    <span><img src="../../assets/icons/zs/refresh-ccw-d.png" alt="">Cambios dentro de 30 días</span>
+    <span><img src="../../assets/icons/zs/credit-card-d.png" alt="">Hasta 3 cuotas sin interés</span>
+    <span><img src="../../assets/icons/zs/zap-d.png" alt="">Nueva colección running</span>
+    <span><img src="../../assets/icons/zs/truck-d.png" alt="">Envío gratis desde $50.000</span>
+    <span><img src="../../assets/icons/zs/refresh-ccw-d.png" alt="">Cambios dentro de 30 días</span>
+    <span><img src="../../assets/icons/zs/credit-card-d.png" alt="">Hasta 3 cuotas sin interés</span>
+    <span><img src="../../assets/icons/zs/zap-d.png" alt="">Nueva colección running</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Zona Sport, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 3h28l-8 34H2z" fill="#c6f432"/><path d="M13.5 12h15l-14 16h13" fill="none" stroke="#0c0d0a" stroke-width="4.2" stroke-linejoin="miter"/></svg>
+      <span class="logo-word">Zona Sport<small>Performance store</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Principal">
+      <a href="#catalogo" data-jump="Fútbol">Fútbol</a>
+      <a href="#catalogo" data-jump="Running">Running</a>
+      <a href="#catalogo" data-jump="Entrenamiento">Entrenamiento</a>
+      <a href="#catalogo" data-jump="Indumentaria">Indumentaria</a>
+      <a href="#catalogo" data-jump="Accesorios">Accesorios</a>
+      <a href="#ayuda">Ayuda</a>
+    </nav>
+    <div class="tools">
+      <a class="icon-btn tool hide-sm" href="#catalogo" aria-label="Buscar productos" id="searchJump"><img src="../../assets/icons/zs/search-l.png" alt=""></a>
+      <button class="icon-btn tool" aria-label="Favoritos" id="favBtn"><img src="../../assets/icons/zs/heart-l.png" alt=""><span class="badge" id="favCount" hidden>0</span></button>
+      <button class="icon-btn tool" data-open-cart aria-label="Abrir carrito"><img src="../../assets/icons/zs/shopping-bag-l.png" alt=""><span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><img src="../../assets/icons/zs/menu-l.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-roledescription="carrusel" aria-label="Destacados">
+    <div class="slide active">
+      <img src="../../assets/img/zona-sport/hero-kick.jpg" alt="Jugador de fútbol pateando el balón en una cancha" fetchpriority="high">
+      <div class="slide-copy wrap">
+        <span class="kicker">Temporada 2026 · Fútbol</span>
+        <h1>Juega con<br><em>actitud.</em></h1>
+        <p>Botines, pelotas y guantes pensados para cada jugada. Equípate para la cancha.</p>
+        <div class="slide-actions"><a class="btn btn-lime" href="#catalogo" data-jump="Fútbol">Comprar fútbol <img src="../../assets/icons/zs/arrow-right-d.png" alt=""></a><a class="btn btn-ghost" href="producto.html?id=1">Ver botines Strike</a></div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="../../assets/img/zona-sport/hero-runner.jpg" alt="Corredor entrenando al atardecer" loading="lazy">
+      <div class="slide-copy wrap">
+        <span class="kicker">Nueva colección · Running</span>
+        <h2>Cada kilómetro<br><em>cuenta.</em></h2>
+        <p>Amortiguación reactiva y prendas livianas para sumar distancia con comodidad.</p>
+        <div class="slide-actions"><a class="btn btn-lime" href="#catalogo" data-jump="Running">Comprar running <img src="../../assets/icons/zs/arrow-right-d.png" alt=""></a><a class="btn btn-ghost" href="producto.html?id=2">Ver Pulse Run</a></div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="../../assets/img/zona-sport/hero-gym.jpg" alt="Atleta levantando una barra en el gimnasio" loading="lazy">
+      <div class="slide-copy wrap">
+        <span class="kicker">Entrenamiento funcional</span>
+        <h2>Más fuerte<br><em>cada día.</em></h2>
+        <p>Mancuernas, guantes, mats y calzado estable para entrenar en casa o en el gimnasio.</p>
+        <div class="slide-actions"><a class="btn btn-lime" href="#catalogo" data-jump="Entrenamiento">Comprar entrenamiento <img src="../../assets/icons/zs/arrow-right-d.png" alt=""></a></div>
+      </div>
+    </div>
+    <div class="hero-ui">
+      <span class="hero-count"><b id="slideNum">01</b> / 03</span>
+      <div class="hero-arrows">
+        <button id="prev" aria-label="Anterior"><img src="../../assets/icons/zs/chevron-left-l.png" alt=""></button>
+        <button id="next" aria-label="Siguiente"><img src="../../assets/icons/zs/chevron-right-l.png" alt=""></button>
+      </div>
+    </div>
+    <div class="hero-progress" id="progress"></div>
+  </section>
+
+  <section class="perks" aria-label="Beneficios">
+    <div class="wrap">
+      <div class="perk"><img src="../../assets/icons/zs/truck-a.png" alt=""><div><strong>Envío a todo Chile</strong><span>Gratis sobre $50.000</span></div></div>
+      <div class="perk"><img src="../../assets/icons/zs/refresh-ccw-a.png" alt=""><div><strong>Cambios simples</strong><span>30 días para cambiar</span></div></div>
+      <div class="perk"><img src="../../assets/icons/zs/shield-check-a.png" alt=""><div><strong>Compra segura</strong><span>Confirmación personal</span></div></div>
+      <div class="perk"><img src="../../assets/icons/zs/headphones-a.png" alt=""><div><strong>Asesoría experta</strong><span>Te ayudamos con tu talla</span></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Compra por<br><em>deporte</em></h2>
+        <p>Encuentra lo que necesitas según tu disciplina. Seleccionamos cada producto para rendir dentro y fuera de la cancha.</p>
+      </div>
+      <div class="cats">
+        <a class="cat" href="#catalogo" data-jump="Fútbol"><img src="../../assets/img/zona-sport/hero-estadio.jpg" alt="" loading="lazy"><div class="cat-label"><div><small>4 productos</small><h3>Fútbol</h3></div><span class="go"><img src="../../assets/icons/zs/arrow-up-right-d.png" alt=""></span></div></a>
+        <a class="cat" href="#catalogo" data-jump="Running"><img src="../../assets/img/zona-sport/running-3.jpg" alt="" loading="lazy"><div class="cat-label"><div><small>Calzado y prendas</small><h3>Running</h3></div><span class="go"><img src="../../assets/icons/zs/arrow-up-right-d.png" alt=""></span></div></a>
+        <a class="cat" href="#catalogo" data-jump="Entrenamiento"><img src="../../assets/img/zona-sport/mancuernas-4.jpg" alt="" loading="lazy"><div class="cat-label"><div><small>Fuerza y cardio</small><h3>Training</h3></div><span class="go"><img src="../../assets/icons/zs/arrow-up-right-d.png" alt=""></span></div></a>
+        <a class="cat" href="#catalogo" data-jump="Indumentaria"><img src="../../assets/img/zona-sport/hoodie-2.jpg" alt="" loading="lazy"><div class="cat-label"><div><small>Ropa técnica</small><h3>Ropa</h3></div><span class="go"><img src="../../assets/icons/zs/arrow-up-right-d.png" alt=""></span></div></a>
+        <a class="cat" href="#catalogo" data-jump="Accesorios"><img src="../../assets/img/zona-sport/mochila-4.jpg" alt="" loading="lazy"><div class="cat-label"><div><small>Para cada día</small><h3>Accesorios</h3></div><span class="go"><img src="../../assets/icons/zs/arrow-up-right-d.png" alt=""></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalogo" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Catálogo<br><em>completo</em></h2>
+        <p>Pasa el cursor para ver otra vista del producto y entra a la ficha para elegir talla, color o tamaño.</p>
+      </div>
+      <div class="toolbar">
+        <div class="chips" id="chips" role="tablist" aria-label="Categorías"></div>
+        <div class="toolbar-right">
+          <label class="search"><img src="../../assets/icons/zs/search-l.png" alt=""><input type="search" id="q" placeholder="Buscar productos" aria-label="Buscar productos"></label>
+          <select class="select" id="sort" aria-label="Ordenar">
+            <option value="featured">Destacados</option>
+            <option value="price-asc">Menor precio</option>
+            <option value="price-desc">Mayor precio</option>
+            <option value="rating">Mejor valorados</option>
+          </select>
+        </div>
+      </div>
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-media"><img src="../../assets/img/zona-sport/hero-sprint.jpg" alt="Atleta en posición de partida sobre una pista" loading="lazy"></div>
+        <div class="split-copy">
+          <span class="kicker">Club Zona</span>
+          <h2>No esperes el momento. Créalo.</h2>
+          <p>Súmate al club y recibe asesoría para elegir tu calzado, acceso anticipado a lanzamientos y beneficios en tu cumpleaños.</p>
+          <div class="stats"><div><b>15</b><span>Productos</span></div><div><b>5</b><span>Disciplinas</span></div><div><b>30</b><span>Días de cambio</span></div></div>
+          <a class="btn btn-dark" href="#club">Quiero unirme <img src="../../assets/icons/zs/arrow-right-l.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Lo más<br><em>buscado</em></h2>
+        <a class="link-arrow" href="#catalogo">Ver todo <img src="../../assets/icons/zs/arrow-right-a.png" alt=""></a>
+      </div>
+      <div class="grid" id="bestGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="ayuda" style="padding-top:0">
+    <div class="wrap help">
+      <div>
+        <h2 class="help-title">¿Dudas?<br><em>Te ayudamos</em></h2>
+        <p class="help-lead">Respondemos por WhatsApp de lunes a sábado. Estas son las preguntas más comunes.</p>
+        <a class="btn btn-wa" id="helpWa" target="_blank" rel="noopener" style="width:auto"><img src="../../assets/icons/whatsapp-white.png" alt=""> Hablar con un asesor</a>
+      </div>
+      <div class="acc">
+        <details id="despachos" open><summary>¿Cuánto demora el despacho?<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body">En Santiago entregamos en 24 a 48 horas hábiles y en regiones entre 2 y 5 días hábiles. El envío es gratis en compras sobre $50.000; bajo ese monto se calcula según tu comuna.</div></details>
+        <details id="cambios"><summary>¿Cómo funcionan los cambios?<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body">Tienes 30 días para cambiar talla o color. El producto debe estar sin uso, con etiquetas y en su caja. Escríbenos y coordinamos el retiro o el cambio en tienda.</div></details>
+        <details id="tallas"><summary>¿Cómo elijo mi talla?<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body">En cada ficha de calzado e indumentaria encontrarás la guía de tallas. Si estás entre dos tallas, te recomendamos la mayor, o consúltanos con el largo de tu pie en centímetros.</div></details>
+        <details id="pagos"><summary>¿Qué medios de pago aceptan?<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body">Transferencia, tarjetas de débito y crédito (hasta 3 cuotas sin interés). Al confirmar tu pedido por WhatsApp te enviamos el enlace de pago.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="news" id="club">
+    <div class="wrap">
+      <div>
+        <h2>Únete al <em>Club Zona</em></h2>
+        <p>Lanzamientos, guías de entrenamiento y ofertas exclusivas. Sin spam.</p>
+      </div>
+      <div>
+        <form class="news-form" id="newsForm">
+          <input type="email" required placeholder="Tu correo electrónico" aria-label="Correo electrónico">
+          <button class="btn btn-lime" type="submit">Suscribirme</button>
+        </form>
+        <small>Formulario de demostración: no envía ni almacena datos.</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Zona Sport">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 3h28l-8 34H2z" fill="#c6f432"/><path d="M13.5 12h15l-14 16h13" fill="none" stroke="#0c0d0a" stroke-width="4.2"/></svg>
+          <span class="logo-word">Zona Sport<small>Performance store</small></span>
+        </a>
+        <p class="about">Equipamiento deportivo seleccionado para fútbol, running y entrenamiento. Atención cercana y despacho a todo Chile.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../assets/icons/zs/instagram-l.png" alt=""></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="../../assets/icons/zs/facebook-l.png" alt=""></a>
+          <a id="footWa" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp-white.png" alt=""></a>
+        </div>
+      </div>
+      <div><h4>Tienda</h4><ul><li><a href="#catalogo" data-jump="Fútbol">Fútbol</a></li><li><a href="#catalogo" data-jump="Running">Running</a></li><li><a href="#catalogo" data-jump="Entrenamiento">Entrenamiento</a></li><li><a href="#catalogo" data-jump="Indumentaria">Indumentaria</a></li><li><a href="#catalogo" data-jump="Accesorios">Accesorios</a></li></ul></div>
+      <div><h4>Ayuda</h4><ul><li><a href="#despachos" data-open-faq>Despachos</a></li><li><a href="#cambios" data-open-faq>Cambios y devoluciones</a></li><li><a href="#tallas" data-open-faq>Guía de tallas</a></li><li><a href="#pagos" data-open-faq>Medios de pago</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li>Lunes a sábado, 10:00 a 19:00</li><li><a id="footWa2" target="_blank" rel="noopener">+56 9 5226 2331</a></li><li>Santiago, Chile</li></ul></div>
+    </div>
+    <div class="giant" aria-hidden="true">Zona Sport</div>
+    <div class="foot-bottom"><span>© <span id="year"></span> Zona Sport. Proyecto de demostración: productos y precios ilustrativos.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div>
+  </div>
+</footer>
+
+<script src="js/data.js?v=4"></script>
+<script src="js/store.js?v=4"></script>
+<script>
+mountShell();
+$("#footWa").href = $("#footWa2").href = $("#helpWa").href = waUrl("Hola Zona Sport, quiero hacer una consulta.");
+$$("[data-open-faq]").forEach(a => a.addEventListener("click", () => { const d = $(a.getAttribute("href")); if (d) d.open = true; }));
+
+/* Catálogo */
+const state = { cat: "Todos", q: "", sort: "featured", onlyFavs: false };
+const chips = ["Todos", ...ZS_CATEGORIES];
+$("#chips").innerHTML = chips.map(c => `<button class="chip ${c === "Todos" ? "active" : ""}" role="tab" data-cat="${c}">${c}</button>`).join("");
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+function renderGrid() {
+  let rows = ZS_PRODUCTS.filter(p =>
+    (state.cat === "Todos" || p.category === state.cat) &&
+    (!state.onlyFavs || favs.includes(p.id)) &&
+    (!state.q || norm(p.name + " " + p.category + " " + p.short).includes(norm(state.q))));
+  if (state.sort === "price-asc") rows.sort((a, b) => a.price - b.price);
+  if (state.sort === "price-desc") rows.sort((a, b) => b.price - a.price);
+  if (state.sort === "rating") rows.sort((a, b) => b.rating - a.rating);
+  $("#grid").innerHTML = rows.length ? rows.map(productCard).join("") : `<div class="empty">No encontramos productos con esos filtros.</div>`;
+  $("#resultCount").textContent = `${rows.length} ${rows.length === 1 ? "producto" : "productos"}${state.onlyFavs ? " en favoritos" : ""}`;
+}
+function setCat(cat) {
+  state.cat = cat; state.onlyFavs = false;
+  $$(".chip").forEach(c => c.classList.toggle("active", c.dataset.cat === cat));
+  renderGrid();
+}
+$("#chips").addEventListener("click", e => { const c = e.target.closest("[data-cat]"); if (c) setCat(c.dataset.cat); });
+$("#q").addEventListener("input", e => { state.q = e.target.value.trim(); renderGrid(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; renderGrid(); });
+$$("[data-jump]").forEach(a => a.addEventListener("click", () => setCat(a.dataset.jump)));
+$("#searchJump").addEventListener("click", () => setTimeout(() => $("#q").focus(), 400));
+$("#favBtn").addEventListener("click", () => {
+  if (!favs.length) { toast("Aún no tienes favoritos"); return; }
+  state.onlyFavs = true; state.cat = "Todos"; $$(".chip").forEach(c => c.classList.toggle("active", c.dataset.cat === "Todos"));
+  renderGrid(); $("#catalogo").scrollIntoView();
+});
+document.addEventListener("click", e => { if (e.target.closest("[data-fav]") && state.onlyFavs) renderGrid(); });
+renderGrid();
+$("#bestGrid").innerHTML = [...ZS_PRODUCTS].sort((a, b) => b.reviews - a.reviews).slice(0, 4).map(productCard).join("");
+
+/* Carrusel */
+const slides = $$(".slide"); let cur = 0, timer;
+function show(i) {
+  cur = (i + slides.length) % slides.length;
+  slides.forEach((s, n) => s.classList.toggle("active", n === cur));
+  $("#slideNum").textContent = String(cur + 1).padStart(2, "0");
+  const pr = $("#progress"); pr.classList.remove("run"); void pr.offsetWidth; pr.classList.add("run");
+  clearTimeout(timer); timer = setTimeout(() => show(cur + 1), 6500);
+}
+$("#prev").addEventListener("click", () => show(cur - 1));
+$("#next").addEventListener("click", () => show(cur + 1));
+show(0);
+
+$("#newsForm").addEventListener("submit", e => { e.preventDefault(); e.target.reset(); toast("¡Gracias! Te sumaste al Club Zona (demo)"); });
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0d0a">
+<title>Producto — Zona Sport</title>
+<link rel="icon" type="image/png" href="../../assets/icons/zs/zap-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/zs.css?v=4">
+</head>
+<body>
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Zona Sport, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 3h28l-8 34H2z" fill="#c6f432"/><path d="M13.5 12h15l-14 16h13" fill="none" stroke="#0c0d0a" stroke-width="4.2"/></svg>
+      <span class="logo-word">Zona Sport<small>Performance store</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Principal">
+      <a href="index.html#catalogo">Catálogo</a>
+      <a href="index.html#club">Club Zona</a>
+    </nav>
+    <div class="tools">
+      <a class="icon-btn tool" href="index.html#catalogo" aria-label="Volver al catálogo"><img src="../../assets/icons/zs/search-l.png" alt=""></a>
+      <button class="icon-btn tool" data-open-cart aria-label="Abrir carrito"><img src="../../assets/icons/zs/shopping-bag-l.png" alt=""><span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><img src="../../assets/icons/zs/menu-l.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><img src="../../assets/icons/zs/chevron-right-l.png" alt=""><a href="index.html#catalogo" id="crumbCat">Catálogo</a><img src="../../assets/icons/zs/chevron-right-l.png" alt=""><span id="crumbName"></span></nav>
+
+  <div class="pdp">
+    <section class="pdp-gallery" aria-label="Imágenes del producto">
+      <div class="thumbs" id="thumbs"></div>
+      <div class="stage">
+        <img id="stageImg" src="" alt="">
+        <div class="stage-nav">
+          <button id="gPrev" aria-label="Imagen anterior"><img src="../../assets/icons/zs/chevron-left-d.png" alt=""></button>
+          <button id="gNext" aria-label="Imagen siguiente"><img src="../../assets/icons/zs/chevron-right-d.png" alt=""></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pdp-info">
+      <span class="card-cat" id="cat"></span>
+      <h1 id="name"></h1>
+      <div class="pdp-rating"><span class="stars" id="stars"></span><span id="ratingText"></span></div>
+      <div class="pdp-price" id="price"></div>
+      <p class="installments" id="installments"></p>
+      <p class="lead" id="short"></p>
+
+      <div class="opt-head"><span id="varLabel"></span><button type="button" id="sizeGuideBtn"><img src="../../assets/icons/zs/ruler-l.png" alt="">Guía de tallas</button></div>
+      <div class="sizes" id="sizes" role="radiogroup"></div>
+
+      <div class="buy-row">
+        <div class="qty-big"><button id="minus" aria-label="Restar"><img src="../../assets/icons/zs/minus-l.png" alt=""></button><span id="qty">1</span><button id="plus" aria-label="Sumar"><img src="../../assets/icons/zs/plus-l.png" alt=""></button></div>
+        <button class="btn btn-lime" id="addBtn"><img src="../../assets/icons/zs/shopping-bag-d.png" alt=""> Agregar al carrito</button>
+        <button class="fav-big" id="favBig" aria-label="Guardar en favoritos"><img class="off" src="../../assets/icons/zs/heart-l.png" alt=""><img class="onn" src="../../assets/icons/zs/heart-a.png" alt=""></button>
+      </div>
+      <button class="btn btn-wa-outline" id="askBtn"><img src="../../assets/icons/whatsapp-green.png" alt=""> Consultar por WhatsApp</button>
+
+      <div class="assure">
+        <div><img src="../../assets/icons/zs/truck-a.png" alt="">Despacho en 24–72 h hábiles</div>
+        <div><img src="../../assets/icons/zs/refresh-ccw-a.png" alt="">30 días para cambios</div>
+      </div>
+
+      <div class="acc">
+        <details open><summary>Descripción<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body" id="desc"></div></details>
+        <details><summary>Características<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body"><ul id="features"></ul></div></details>
+        <details><summary>Despachos y cambios<img src="../../assets/icons/zs/plus-l.png" alt=""></summary><div class="acc-body">Despacho a todo Chile, gratis en compras sobre $50.000. Puedes cambiar talla o color dentro de 30 días, con el producto sin uso y en su empaque original. Coordinamos cada pedido por WhatsApp.</div></details>
+      </div>
+      <button class="share-btn" id="share"><img src="../../assets/icons/zs/share-2-l.png" alt="">Compartir producto</button>
+      <p class="demo-note">Proyecto de demostración: precios, opiniones e imágenes son ilustrativos.</p>
+    </section>
+  </div>
+
+  <section class="section" style="padding-top:20px">
+    <div class="sec-head"><h2>También te<br><em>puede gustar</em></h2><a class="link-arrow" href="index.html#catalogo">Ver catálogo <img src="../../assets/icons/zs/arrow-right-a.png" alt=""></a></div>
+    <div class="grid" id="related"></div>
+  </section>
+</main>
+
+<footer class="footer" style="padding-top:30px">
+  <div class="wrap">
+    <div class="foot-bottom" style="margin-top:0"><span>© <span id="year"></span> Zona Sport. Proyecto de demostración.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div>
+  </div>
+</footer>
+
+<div class="sticky-buy" id="stickyBuy" aria-hidden="true">
+  <img class="thumb-s" id="sbImg" src="" alt="">
+  <div><b id="sbName"></b><span id="sbPrice"></span></div>
+  <button class="btn btn-lime" id="sbAdd">Agregar</button>
+</div>
+
+<div class="modal" id="sizeModal" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
+  <div class="modal-box">
+    <div class="modal-head"><h3 id="sgTitle">Guía de tallas</h3><button class="icon-btn" id="sgClose" aria-label="Cerrar"><img src="../../assets/icons/zs/x-l.png" alt=""></button></div>
+    <p>Mide tu pie desde el talón hasta el dedo más largo y compara con la tabla. Si estás entre dos tallas, elige la mayor.</p>
+    <table><thead><tr><th>EU</th><th>CL / AR</th><th>US</th><th>Largo del pie</th></tr></thead>
+      <tbody><tr><td>38</td><td>37</td><td>6</td><td>24,0 cm</td></tr><tr><td>39</td><td>38</td><td>6,5</td><td>24,5 cm</td></tr><tr><td>40</td><td>39</td><td>7</td><td>25,0 cm</td></tr><tr><td>41</td><td>40</td><td>8</td><td>26,0 cm</td></tr><tr><td>42</td><td>41</td><td>8,5</td><td>26,5 cm</td></tr><tr><td>43</td><td>42</td><td>9,5</td><td>27,5 cm</td></tr><tr><td>44</td><td>43</td><td>10</td><td>28,0 cm</td></tr></tbody></table>
+    <p style="margin-top:16px">Ropa: XS 84–88 · S 88–94 · M 94–100 · L 100–106 · XL 106–112 cm de contorno de pecho.</p>
+  </div>
+</div>
+
+<script src="js/data.js?v=4"></script>
+<script src="js/store.js?v=4"></script>
+<script>
+mountShell();
+const p = findProduct(new URLSearchParams(location.search).get("id")) || ZS_PRODUCTS[0];
+let gi = 0, qty = 1, variant = p.variants.options[0];
+
+document.title = `${p.name} — Zona Sport`;
+$("#crumbName").textContent = p.name;
+$("#crumbCat").textContent = p.category;
+$("#cat").textContent = p.category;
+$("#name").textContent = p.name;
+$("#short").textContent = p.short;
+$("#desc").textContent = p.description;
+$("#features").innerHTML = p.features.map(f => `<li>${f}</li>`).join("");
+$("#stars").innerHTML = Array.from({ length: 5 }, (_, i) => `<img src="${ICON}star-${i < Math.round(p.rating) ? "a" : "l"}.png" alt=""${i < Math.round(p.rating) ? "" : ' style="opacity:.3"'}>`).join("");
+$("#ratingText").textContent = `${p.rating.toFixed(1)} · ${p.reviews} opiniones`;
+const off = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+$("#price").innerHTML = `<strong>${money(p.price)}</strong>${p.oldPrice ? `<s>${money(p.oldPrice)}</s><span class="off">-${off}%</span>` : ""}`;
+$("#installments").textContent = `O 3 cuotas sin interés de ${money(Math.round(p.price / 3))}`;
+
+/* Galería */
+$("#thumbs").innerHTML = p.images.map((src, i) => `<button class="thumb ${i ? "" : "active"}" data-i="${i}" aria-label="Ver imagen ${i + 1}"><img src="${src}" alt=""></button>`).join("");
+function showImg(i) {
+  gi = (i + p.images.length) % p.images.length;
+  $("#stageImg").src = p.images[gi]; $("#stageImg").alt = `${p.name}, imagen ${gi + 1} de ${p.images.length}`;
+  $$(".thumb").forEach((t, n) => t.classList.toggle("active", n === gi));
+}
+$("#thumbs").addEventListener("click", e => { const t = e.target.closest("[data-i]"); if (t) showImg(Number(t.dataset.i)); });
+$("#gPrev").addEventListener("click", () => showImg(gi - 1));
+$("#gNext").addEventListener("click", () => showImg(gi + 1));
+showImg(0);
+
+/* Variantes */
+$("#varLabel").textContent = p.variants.label;
+$("#sizeGuideBtn").hidden = !/Talla/.test(p.variants.label);
+$("#sizes").innerHTML = p.variants.options.map((o, i) => `<button class="size ${i ? "" : "active"}" role="radio" aria-checked="${!i}" data-v="${o}">${o}</button>`).join("");
+$("#sizes").addEventListener("click", e => {
+  const b = e.target.closest("[data-v]"); if (!b) return;
+  variant = b.dataset.v;
+  $$(".size").forEach(s => { s.classList.toggle("active", s === b); s.setAttribute("aria-checked", s === b); });
+});
+$("#minus").addEventListener("click", () => { qty = Math.max(1, qty - 1); $("#qty").textContent = qty; });
+$("#plus").addEventListener("click", () => { qty = Math.min(99, qty + 1); $("#qty").textContent = qty; });
+$("#addBtn").addEventListener("click", () => { addToCart(p.id, variant, qty); openCart(); });
+$("#askBtn").addEventListener("click", () => window.open(waUrl(`Hola Zona Sport, quiero consultar por:\n• ${p.name}\n• ${p.variants.label}: ${variant}\n• Cantidad: ${qty}\n• Precio publicado: ${money(p.price)}\n\n¿Tienen stock?`), "_blank", "noopener"));
+
+/* Favorito */
+$("#favBig").dataset.fav = p.id;
+$("#favBig").classList.toggle("on", favs.includes(p.id));
+
+/* Guía de tallas */
+const modal = $("#sizeModal");
+$("#sizeGuideBtn").addEventListener("click", () => modal.classList.add("open"));
+$("#sgClose").addEventListener("click", () => modal.classList.remove("open"));
+modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
+document.addEventListener("zs:escape", () => modal.classList.remove("open"));
+
+/* Compartir */
+$("#share").addEventListener("click", async () => {
+  try { if (navigator.share) await navigator.share({ title: p.name, url: location.href }); else { await navigator.clipboard.writeText(location.href); toast("Enlace copiado"); } } catch {}
+});
+
+/* Barra fija de compra (celular) */
+$("#sbImg").src = p.images[0]; $("#sbName").textContent = p.name; $("#sbPrice").textContent = money(p.price);
+$("#sbAdd").addEventListener("click", () => { addToCart(p.id, variant, qty); openCart(); });
+new IntersectionObserver(([en]) => {
+  const show = !en.isIntersecting && en.boundingClientRect.top < 0;
+  $("#stickyBuy").classList.toggle("show", show); document.body.classList.toggle("has-sticky", show);
+}).observe($("#addBtn"));
+
+/* Relacionados */
+const related = ZS_PRODUCTS.filter(x => x.id !== p.id && x.category === p.category);
+const fill = ZS_PRODUCTS.filter(x => x.id !== p.id && x.category !== p.category);
+$("#related").innerHTML = [...related, ...fill].slice(0, 4).map(productCard).join("");
+</script>
+</body>
+</html>

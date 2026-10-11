@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4ede1">
+<meta name="description" content="Mesa Noble: cocina de autor y producto de estación en Palermo, Buenos Aires. Carta, reservas y pedidos para retirar.">
+<title>Mesa Noble — Cocina de autor en Buenos Aires</title>
+<link rel="icon" type="image/png" href="../../assets/icons/mn/chef-hat-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mn.css?v=4">
+</head>
+<body>
+<div class="topline"><img src="../../assets/icons/mn/map-pin-l.png" alt="">Gorriti 4870, Palermo <span class="hide-sm"><img src="../../assets/icons/mn/clock-l.png" alt="">Martes a domingo · 12 a 16 h y 20 a 00 h</span></div>
+
+<header class="head">
+  <div class="wrap">
+    <nav class="nav left" aria-label="Secciones">
+      <a href="#carta">La carta</a><a href="#cocina">Nuestra cocina</a><a href="#equipo">Equipo</a><a href="#reservas" class="mobile-only">Reservas</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Mesa Noble, inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#9c4f30" stroke-width="1.2"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#9c4f30" stroke-width=".6"/><text x="24" y="29.5" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-style="italic" fill="#2a2620">MN</text><path d="M17 33.5h14" stroke="#9c4f30" stroke-width=".8"/></svg>
+      <span class="brand-txt"><span class="brand-name">Mesa Noble</span><span class="brand-sub">Cocina de autor · Buenos Aires</span></span>
+    </a>
+    <div class="nav right">
+      <a href="#reservas" class="hide-md">Reservas</a>
+      <button class="order-btn" data-open-order aria-label="Ver pedido"><img src="../../assets/icons/mn/shopping-bag-d.png" alt=""><span class="label">Pedido</span><span class="count" data-count hidden>0</span></button>
+      <button class="round menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><img src="../../assets/icons/mn/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="over line">Desde 2019 · Palermo</span>
+      <h1>El placer de comer <em>bien</em>, sin apuro.</h1>
+      <p>Cocina de estación, fuego lento y producto de pequeños productores. Una mesa para compartir y una carta que cambia con la temporada.</p>
+      <div class="hero-actions">
+        <a class="btn btn-terra" href="#reservas">Reservar una mesa</a>
+        <a class="btn btn-line" href="#carta">Ver la carta</a>
+      </div>
+      <div class="hero-meta">
+        <div><img src="../../assets/icons/mn/calendar-a.png" alt=""><div><strong>Reservas online</strong><span>Mesas de 2 a 8 personas</span></div></div>
+        <div><img src="../../assets/icons/mn/shopping-bag-a.png" alt=""><div><strong>Para retirar</strong><span>Pedí y pasá a buscar</span></div></div>
+      </div>
+    </div>
+    <figure class="hero-media" style="margin:0">
+      <img src="../../assets/img/mesa-noble/hero.jpg" alt="Plato de autor servido en una mesa con copas de vino" fetchpriority="high">
+      <figcaption><b>Plato de temporada</b>Salmón rosado, vegetales de huerta y emulsión de hierbas.</figcaption>
+    </figure>
+  </section>
+
+  <section class="manifesto wrap">
+    <span class="over center">Nuestra filosofía</span>
+    <p>“La buena cocina no necesita ruido. Necesita <em>producto</em>, <em>tiempo</em> y <em>cuidado</em>. Cocinamos lo que la estación nos da y lo servimos como nos gustaría que nos lo sirvan.”</p>
+    <div class="signature">— Valentina Ríos, chef ejecutiva</div>
+  </section>
+
+  <section class="wrap featured" aria-label="Platos destacados" id="destacados"></section>
+
+  <section class="carta" id="carta">
+    <div class="wrap">
+      <div class="carta-head">
+        <span class="over center">La carta</span>
+        <h2>Otoño en la mesa</h2>
+        <p>Tocá un plato para ver su historia, maridaje y alérgenos. Sumalo a tu pedido para retirar con el botón +.</p>
+      </div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="menu-cols" id="menu"></div>
+      <p class="carta-note">Precios en pesos argentinos con IVA incluido. Consultá opciones sin TACC y vegetarianas.</p>
+    </div>
+  </section>
+
+  <section class="tasting">
+    <div class="wrap tasting-grid">
+      <figure class="tasting-img"><img src="../../assets/img/mesa-noble/emplatado-1.jpg" alt="Plato del menú degustación terminado con salsa" loading="lazy"></figure>
+      <div>
+        <span class="over line">Experiencia</span>
+        <h2>Menú degustación <em>de siete tiempos</em></h2>
+        <p>Un recorrido por la estación pensado por Valentina y su equipo. Se sirve de martes a sábado por la noche, con reserva previa y para toda la mesa.</p>
+        <ol class="courses">
+          <li><span>I</span>Pan de masa madre y manteca de campo</li>
+          <li><span>II</span>Crudo de pesca del día, cítricos y hinojo</li>
+          <li><span>III</span>Vegetales del horno de barro</li>
+          <li><span>IV</span>Risotto de hongos de pino</li>
+          <li><span>V</span>Ojo de bife, papas rústicas y chimichurri</li>
+          <li><span>VI</span>Prepostre de frutas de estación</li>
+          <li><span>VII</span>Cacao amargo, crema y café</li>
+        </ol>
+        <div class="tasting-price"><div><small>Por persona</small><strong>$ 68.000</strong></div><div><small>Con maridaje</small><strong>$ 96.000</strong></div></div>
+        <a class="btn btn-terra" href="#reservas">Reservar degustación</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap story" id="cocina">
+    <div class="story-pics">
+      <img class="p1" src="../../assets/img/mesa-noble/cocina-1.jpg" alt="Cocineros trabajando en la cocina abierta del restaurante" loading="lazy">
+      <img class="p2" src="../../assets/img/mesa-noble/emplatado-2.jpg" alt="Chef terminando un plato con pinzas" loading="lazy">
+    </div>
+    <div>
+      <span class="over line">Nuestra cocina</span>
+      <h2>El producto primero. <em>El detalle siempre.</em></h2>
+      <p>Trabajamos con huertas del cordón bonaerense, pescadores de la costa atlántica y carnes de pastura. Lo que no está en temporada no está en la carta.</p>
+      <p>Nuestro horno de barro y la parrilla de quebracho marcan el ritmo de la cocina: cocciones largas, fuegos suaves y sabores definidos.</p>
+      <div class="pillars">
+        <div><img src="../../assets/icons/mn/leaf-a.png" alt=""><strong>De estación</strong><span>Carta que cambia cuatro veces al año</span></div>
+        <div><img src="../../assets/icons/mn/flame-a.png" alt=""><strong>Fuego lento</strong><span>Horno de barro y brasas de quebracho</span></div>
+        <div><img src="../../assets/icons/mn/users-a.png" alt=""><strong>Productores</strong><span>Más de 12 proveedores locales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="equipo">
+    <div class="wrap">
+      <div class="team-head">
+        <div><span class="over line">El equipo</span><h2>Las manos detrás <em>de cada plato</em></h2></div>
+        <p>Una cocina se construye en equipo: técnica, sensibilidad por el producto y mucho respeto por la temporada.</p>
+      </div>
+      <div class="chefs">
+        <article class="chef"><figure><div class="chef-img"><img src="../../assets/img/mesa-noble/chef-valentina.jpg" alt="Retrato de Valentina Ríos, chef ejecutiva, cortando vegetales" loading="lazy"></div><figcaption><h3>Valentina Ríos</h3><span class="role">Chef ejecutiva</span><p>Define la carta de cada estación y trabaja codo a codo con los productores de la huerta.</p></figcaption></figure></article>
+        <article class="chef"><figure><div class="chef-img"><img src="../../assets/img/mesa-noble/chef-tomas.jpg" alt="Retrato de Tomás Ferreyra, chef de cocina" loading="lazy"></div><figcaption><h3>Tomás Ferreyra</h3><span class="role">Chef de cocina</span><p>A cargo de la parrilla y las pastas frescas. Obsesionado con los fondos y las cocciones largas.</p></figcaption></figure></article>
+        <article class="chef"><figure><div class="chef-img"><img src="../../assets/img/mesa-noble/chef-lucia.jpg" alt="Retrato de Lucía Benítez, pastelera, amasando" loading="lazy"></div><figcaption><h3>Lucía Benítez</h3><span class="role">Pastelería y panadería</span><p>Responsable del pan de masa madre y de una línea de postres de dulzor equilibrado.</p></figcaption></figure></article>
+        <article class="chef"><figure><div class="chef-img"><img src="../../assets/img/mesa-noble/chef-martin.jpg" alt="Retrato de Martín Acosta, sous chef" loading="lazy"></div><figcaption><h3>Martín Acosta</h3><span class="role">Sous chef</span><p>Coordina el servicio y cuida que cada plato salga igual que el primero del día.</p></figcaption></figure></article>
+      </div>
+      <p class="team-note">Restaurante y equipo ficticios, creados como proyecto de demostración. Las fotografías son de bancos de imágenes libres.</p>
+    </div>
+  </section>
+
+  <section class="wrap mosaic" aria-label="El salón">
+    <figure><img src="../../assets/img/mesa-noble/salon-2.jpg" alt="Mesa preparada junto a la ventana con luz cálida" loading="lazy"><figcaption>El salón</figcaption></figure>
+    <figure><img src="../../assets/img/mesa-noble/pesca-2.jpg" alt="Salmón servido con vegetales en el salón" loading="lazy"><figcaption>Al pase</figcaption></figure>
+    <figure><img src="../../assets/img/mesa-noble/vino.jpg" alt="Copa de vino blanco servida junto a una ensalada" loading="lazy"><figcaption>Cava</figcaption></figure>
+    <figure><img src="../../assets/img/mesa-noble/salon-1.jpg" alt="Salón del restaurante con mesas de madera" loading="lazy"><figcaption>Mesas</figcaption></figure>
+    <figure><img src="../../assets/img/mesa-noble/cocina-2.jpg" alt="Cocinero preparando ingredientes" loading="lazy"><figcaption>Mise en place</figcaption></figure>
+  </section>
+
+  <section class="events">
+    <img src="../../assets/img/mesa-noble/salon-2.jpg" alt="" loading="lazy">
+    <div class="wrap events-box">
+      <span class="over line" style="color:#e7b79b">Eventos privados</span>
+      <h2>Tu celebración, <em>a nuestra mesa</em></h2>
+      <p>Cumpleaños, cenas de empresa o reuniones familiares. Reservamos el salón completo para grupos de 12 a 40 personas con menú a medida.</p>
+      <div class="events-facts"><div><b>12–40</b><span>personas</span></div><div><b>3</b><span>opciones de menú</span></div><div><b>100%</b><span>salón privado</span></div></div>
+      <a class="btn btn-light" id="eventWa" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-white.png" alt=""> Consultar fecha</a>
+    </div>
+  </section>
+
+  <section class="reserve" id="reservas">
+    <div class="reserve-media"><img src="../../assets/img/mesa-noble/salon-3.jpg" alt="Salón del restaurante con bancos tapizados" loading="lazy"></div>
+    <div class="reserve-box">
+      <span class="over line">Reservas</span>
+      <h2>Una mesa para compartir <em>algo bueno</em></h2>
+      <p>Elegí fecha, horario y cantidad de personas. Te confirmamos la disponibilidad por WhatsApp.</p>
+      <form class="form" id="resForm">
+        <label>Nombre<input name="name" required autocomplete="name"></label>
+        <div class="row3">
+          <label>Fecha<input type="date" name="date" id="resDate" required></label>
+          <label>Horario<select name="time" required><option>12:30</option><option>13:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option></select></label>
+          <label>Personas<select name="people"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label>
+        </div>
+        <label>Ocasión o comentarios (opcional)<input name="notes" placeholder="Cumpleaños, alergias, silla para bebé..."></label>
+        <button class="btn btn-ink block" type="submit"><img src="../../assets/icons/whatsapp-white.png" alt=""> Solicitar reserva</button>
+        <p class="feedback" id="resFeedback" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="wrap info" aria-label="Información">
+    <div><img src="../../assets/icons/mn/map-pin-a.png" alt=""><h3>Dónde estamos</h3><p>Gorriti 4870, Palermo Soho<br>Ciudad Autónoma de Buenos Aires</p></div>
+    <div><img src="../../assets/icons/mn/clock-a.png" alt=""><h3>Horarios</h3><dl><dt>Mar a vie</dt><dd>12–16 h · 20–00 h</dd><dt>Sáb y dom</dt><dd>12–17 h · 20–01 h</dd><dt>Lunes</dt><dd>Cerrado</dd></dl></div>
+    <div><img src="../../assets/icons/mn/phone-a.png" alt=""><h3>Contacto</h3><p>reservas@mesanoble.com.ar<br>Para eventos privados escribinos con tu fecha tentativa.</p></div>
+  </section>
+  <section class="wrap map-wrap" aria-label="Mapa">
+    <iframe title="Mapa de Palermo Soho, Buenos Aires" src="https://maps.google.com/maps?q=Gorriti%204870%2C%20Palermo%2C%20Buenos%20Aires&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="index.html" aria-label="Mesa Noble">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#d39a7c" stroke-width="1.2"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#d39a7c" stroke-width=".6"/><text x="24" y="29.5" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="16" font-style="italic" fill="#f4ede1">MN</text><path d="M17 33.5h14" stroke="#d39a7c" stroke-width=".8"/></svg>
+        <span class="brand-txt"><span class="brand-name">Mesa Noble</span><span class="brand-sub">Cocina de autor · Buenos Aires</span></span>
+      </a>
+      <nav class="foot-links"><a href="#carta">Carta</a><a href="#cocina">Nuestra cocina</a><a href="#equipo">Equipo</a><a href="#reservas">Reservas</a></nav>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../assets/icons/mn/instagram-l.png" alt=""></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="../../assets/icons/mn/facebook-l.png" alt=""></a>
+        <a id="footWa" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp-white.png" alt=""></a>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year"></span> Mesa Noble · Marca ficticia, proyecto de demostración.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div>
+  </div>
+</footer>
+
+<script src="js/data.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+<script>
+mountShell();
+$("#footWa").href = wa("Hola Mesa Noble, quiero hacer una consulta.");
+$("#eventWa").href = wa("Hola Mesa Noble, quiero consultar por un evento privado. Fecha tentativa: ___, cantidad de personas: ___.");
+
+/* Destacados */
+$("#destacados").innerHTML = ["ojo-de-bife", "pappardelle-ragu", "torta-cacao"].map(id => {
+  const d = dish(id);
+  return `<a class="feat" href="plato.html?plato=${d.id}"><div class="feat-img"><img src="${d.images[0]}" alt="${d.name}" loading="lazy"></div><div class="feat-txt"><small>${d.tag}</small><h3>${d.name}</h3><span>${money(d.price)}</span></div></a>`;
+}).join("");
+
+/* Carta */
+const tabs = ["Toda la carta", ...MN_CATEGORIES];
+$("#tabs").innerHTML = tabs.map((t, i) => `<button class="tab ${i ? "" : "active"}" role="tab" data-tab="${t}">${t}</button>`).join("");
+function row(d) {
+  return `<article class="dish">
+    <a class="dish-pic" href="plato.html?plato=${d.id}" aria-label="Ver ${d.name}"><img src="${d.images[0]}" alt="" loading="lazy"></a>
+    <div>
+      <div class="dish-line"><h3><a href="plato.html?plato=${d.id}">${d.name}</a></h3><span class="dots"></span><span class="dish-price">${money(d.price)}</span></div>
+      <p>${d.short}</p><span class="dish-tag">${d.tag}</span>
+    </div>
+    <button class="add" data-add="${d.id}" aria-label="Agregar ${d.name} al pedido"><img src="${MI}plus-d.png" alt=""></button>
+  </article>`;
+}
+function renderMenu(tab) {
+  const cats = tab === "Toda la carta" ? MN_CATEGORIES : [tab];
+  $("#menu").innerHTML = cats.map(c => `<h3 class="cat-title">${c}</h3>` + MN_MENU.filter(d => d.category === c).map(row).join("")).join("");
+}
+$("#tabs").addEventListener("click", e => {
+  const b = e.target.closest("[data-tab]"); if (!b) return;
+  $$(".tab").forEach(t => t.classList.toggle("active", t === b)); renderMenu(b.dataset.tab);
+});
+renderMenu("Toda la carta");
+
+/* Reservas */
+$("#resDate").min = new Date().toISOString().slice(0, 10);
+$("#resForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target)), fb = $("#resFeedback");
+  if (f.date < new Date().toISOString().slice(0, 10)) { fb.textContent = "Elegí una fecha de hoy en adelante."; fb.classList.add("err"); return; }
+  const fecha = new Date(f.date + "T12:00").toLocaleDateString("es-AR", { weekday: "long", day: "numeric", month: "long" });
+  fb.classList.remove("err");
+  fb.textContent = `Listo, ${f.name}. Se abrirá WhatsApp para confirmar tu mesa para ${f.people} el ${fecha} a las ${f.time}.`;
+  window.open(wa(`Hola Mesa Noble, quiero reservar una mesa.\n\nNombre: ${f.name}\nFecha: ${fecha}\nHorario: ${f.time}\nPersonas: ${f.people}${f.notes ? `\nComentarios: ${f.notes}` : ""}`), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
