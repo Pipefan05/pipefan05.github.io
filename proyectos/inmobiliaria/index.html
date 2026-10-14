@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16181B">
+<meta name="description" content="Altura Propiedades: casas y departamentos en venta y arriendo en el sector oriente de Santiago. Busca, compara y agenda tu visita.">
+<title>Altura Propiedades — Venta y arriendo en Santiago</title>
+<link rel="icon" type="image/png" href="../../assets/icons/in/building-2-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ap.css?v=2">
+</head>
+<body>
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Altura Propiedades, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2B44E0"/><path d="M9 30V19.5L20 10l11 9.5V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M15.5 30v-7.5h9V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M27 8.5h4.5V13" fill="none" stroke="#AEBBFF" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><b>Altura</b><small>Propiedades</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#propiedades">Propiedades</a><a href="#comunas">Comunas</a><a href="#vender">Vende o arrienda</a><a href="#equipo">Equipo</a>
+    </nav>
+    <div class="head-tools">
+      <button class="icon-btn" id="favBtn" aria-label="Ver favoritas"><img class="lt" src="../../assets/icons/in/heart-l.png" alt=""><img class="dk" src="../../assets/icons/in/heart-d.png" alt=""><span class="count" data-fav-count hidden>0</span></button>
+      <a class="btn btn-blue" href="#vender">Publica tu propiedad</a>
+      <button class="icon-btn burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><img class="lt" src="../../assets/icons/in/menu-l.png" alt=""><img class="dk" src="../../assets/icons/in/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img src="../../assets/img/inmobiliaria/hero.jpg" alt="Casa moderna iluminada al atardecer" fetchpriority="high">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#AEBBFF">Corredora de propiedades · Santiago</span>
+      <h1>El lugar donde quieres <em>vivir</em>, sin perder tiempo.</h1>
+      <div class="hero-sub">
+        <p>Casas y departamentos seleccionados en el sector oriente. Te acompañamos desde la primera visita hasta la firma.</p>
+        <div class="hero-stats"><div><b>9</b><span>propiedades activas</span></div><div><b>7</b><span>comunas</span></div><div><b>48 h</b><span>para tu tasación</span></div></div>
+      </div>
+      <form class="search" id="search" aria-label="Buscar propiedades">
+        <div class="search-tabs" role="tablist"><button type="button" class="stab on" data-op="">Todas</button><button type="button" class="stab" data-op="Venta">Comprar</button><button type="button" class="stab" data-op="Arriendo">Arrendar</button></div>
+        <div class="search-row">
+          <div class="sf"><label for="fComuna">Comuna</label><select id="fComuna"><option value="">Todas las comunas</option></select></div>
+          <div class="sf"><label for="fType">Tipo</label><select id="fType"><option value="">Cualquier tipo</option><option>Casa</option><option>Departamento</option><option>Loft</option><option>Penthouse</option></select></div>
+          <div class="sf"><label for="fDorms">Dormitorios</label><select id="fDorms"><option value="0">Cualquiera</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4 o más</option></select></div>
+          <div class="sf"><label for="fPrice">Precio máximo</label><select id="fPrice"><option value="0">Sin límite</option><option value="1000000">Hasta $1.000.000/mes</option><option value="400000000">Hasta UF 10.000</option><option value="600000000">Hasta UF 15.000</option><option value="900000000">Hasta UF 22.500</option></select></div>
+          <button class="btn btn-blue" type="submit"><img src="../../assets/icons/in/search-l.png" alt="">Buscar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="propiedades">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Propiedades</span><h2>Encuentra tu próximo hogar</h2></div>
+        <p>Todas nuestras propiedades están visitadas y verificadas por un corredor del equipo.</p>
+      </div>
+      <div class="results-bar">
+        <p id="count"></p>
+        <div class="rb-right">
+          <span id="activeChips"></span>
+          <select class="sel" id="sort" aria-label="Ordenar"><option value="rel">Más relevantes</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="m2">Más metros</option></select>
+          <div class="view-toggle" role="group" aria-label="Vista"><button class="on" data-view="grid" aria-label="Cuadrícula"><img src="../../assets/icons/in/grid-2x2-l.png" alt=""></button><button data-view="list" aria-label="Lista"><img src="../../assets/icons/in/list-d.png" alt=""></button></div>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section paper" id="comunas">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Comunas</span><h2>Explora por barrio</h2></div><p>Conocemos cada sector: colegios, conectividad, comercio y plusvalía.</p></div>
+      <div class="comunas">
+        <button class="comuna" data-comuna="Las Condes"><img src="../../assets/img/inmobiliaria/p4-1.jpg" alt="" loading="lazy"><div><b>Las Condes</b><span data-n="Las Condes"></span></div></button>
+        <button class="comuna" data-comuna="Providencia"><img src="../../assets/img/inmobiliaria/santiago-2.jpg" alt="" loading="lazy"><div><b>Providencia</b><span data-n="Providencia"></span></div></button>
+        <button class="comuna" data-comuna="Lo Barnechea"><img src="../../assets/img/inmobiliaria/p1-1.jpg" alt="" loading="lazy"><div><b>Lo Barnechea</b><span data-n="Lo Barnechea"></span></div></button>
+        <button class="comuna" data-comuna="Ñuñoa"><img src="../../assets/img/inmobiliaria/p6-2.jpg" alt="" loading="lazy"><div><b>Ñuñoa</b><span data-n="Ñuñoa"></span></div></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:clamp(56px,7vw,90px)">
+    <div class="why">
+      <div><b>12<em>+</em></b><span>años en el mercado inmobiliario</span></div>
+      <div><b>340</b><span>propiedades vendidas y arrendadas</span></div>
+      <div><b>48<em>h</em></b><span>para entregarte una tasación</span></div>
+      <div><b>2<em>%</em></b><span>de comisión más IVA en ventas</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="vender">
+    <div class="wrap">
+      <div class="sell">
+        <div class="sell-media"><img src="../../assets/img/inmobiliaria/llaves.jpg" alt="Corredora entregando las llaves de una propiedad" loading="lazy"></div>
+        <div class="sell-body">
+          <span class="eyebrow">Vende o arrienda con nosotros</span>
+          <h2>Tu propiedad, en las mejores manos</h2>
+          <p>Nos encargamos de todo: tasación, fotografía profesional, publicación, visitas y negociación.</p>
+          <ol class="steps3">
+            <li><span>1</span><div><b>Tasación sin costo</b><small>Valor de mercado en 48 horas</small></div></li>
+            <li><span>2</span><div><b>Fotos y publicación</b><small>En los principales portales</small></div></li>
+            <li><span>3</span><div><b>Visitas y cierre</b><small>Filtramos interesados y te acompañamos a la firma</small></div></li>
+          </ol>
+          <form class="form" id="sellForm">
+            <div class="row"><input name="nombre" required placeholder="Tu nombre" autocomplete="name"><input name="telefono" required placeholder="Teléfono" inputmode="tel" autocomplete="tel"></div>
+            <div class="row">
+              <select name="operacion"><option>Quiero vender</option><option>Quiero arrendar</option></select>
+              <select name="tipo"><option>Casa</option><option>Departamento</option><option>Oficina</option><option>Terreno</option></select>
+            </div>
+            <input name="comuna" placeholder="Comuna de la propiedad">
+            <button class="btn btn-wa block" type="submit"><img src="../../assets/icons/whatsapp-white.png" alt="">Solicitar tasación por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper" id="equipo">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Equipo</span><h2>Corredores que conocen el barrio</h2></div><p>Cada propiedad tiene un corredor a cargo que la conoce en detalle.</p></div>
+      <div class="agents" id="agents"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Altura Propiedades">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2B44E0"/><path d="M9 30V19.5L20 10l11 9.5V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M15.5 30v-7.5h9V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M27 8.5h4.5V13" fill="none" stroke="#AEBBFF" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <span><b>Altura</b><small>Propiedades</small></span>
+        </a>
+        <p>Corredora de propiedades en el sector oriente de Santiago. Venta, arriendo y administración.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../assets/icons/in/instagram-l.png" alt=""></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../../assets/icons/in/linkedin-l.png" alt=""></a>
+          <a data-wa="" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp-white.png" alt=""></a>
+        </div>
+      </div>
+      <div><h4>Propiedades</h4><ul><li><a href="#propiedades" data-op-link="Venta">En venta</a></li><li><a href="#propiedades" data-op-link="Arriendo">En arriendo</a></li><li><a href="#comunas">Por comuna</a></li></ul></div>
+      <div><h4>Servicios</h4><ul><li><a href="#vender">Tasación</a></li><li><a href="#vender">Vender</a></li><li><a href="#vender">Arrendar</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a data-wa="" target="_blank" rel="noopener">+56 9 5226 2331</a></li><li>Las Condes, Santiago</li><li>Lunes a sábado</li></ul></div>
+    </div>
+    <div class="foot-big" aria-hidden="true">Altura</div>
+    <div class="foot-bottom"><span>© <span id="year"></span> Altura Propiedades · Corredora ficticia, proyecto de demostración.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><img src="../../assets/icons/whatsapp-badge.png" alt=""></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+<script>
+const st = { op: "", comuna: "", type: "", dorms: 0, max: 0, sort: "rel", onlyFav: false };
+[...new Set(AP_PROPS.map(p => p.comuna))].sort().forEach(c => $("#fComuna").insertAdjacentHTML("beforeend", `<option>${c}</option>`));
+$$("[data-n]").forEach(el => { const n = AP_PROPS.filter(p => p.comuna === el.dataset.n).length; el.textContent = `${n} ${n === 1 ? "propiedad" : "propiedades"}`; });
+
+function render() {
+  let rows = AP_PROPS.filter(p =>
+    (!st.op || p.op === st.op) && (!st.comuna || p.comuna === st.comuna) && (!st.type || p.type === st.type) &&
+    p.dorms >= st.dorms && (!st.max || priceCLP(p) <= st.max) && (!st.onlyFav || favs.includes(p.id)));
+  if (st.sort === "asc") rows.sort((a, b) => priceCLP(a) - priceCLP(b));
+  if (st.sort === "desc") rows.sort((a, b) => priceCLP(b) - priceCLP(a));
+  if (st.sort === "m2") rows.sort((a, b) => b.m2 - a.m2);
+  $("#grid").innerHTML = rows.length ? rows.map(propCard).join("") : `<div class="empty">No encontramos propiedades con esos filtros. Prueba ampliando la búsqueda o escríbenos: muchas propiedades no se publican.</div>`;
+  $("#count").innerHTML = `${rows.length} ${rows.length === 1 ? "propiedad" : "propiedades"} <span>${st.onlyFav ? "en tus favoritas" : st.op ? "en " + st.op.toLowerCase() : "disponibles"}</span>`;
+  const chips = [st.comuna, st.type, st.dorms ? st.dorms + "+ dorm." : "", st.onlyFav ? "Favoritas" : ""].filter(Boolean);
+  $("#activeChips").innerHTML = chips.length ? chips.map(c => `<span class="chip">${c}</span>`).join(" ") + ` <button class="chip" id="clear"><img src="${II}x-d.png" alt="">Limpiar</button>` : "";
+}
+function readForm() {
+  st.comuna = $("#fComuna").value; st.type = $("#fType").value; st.dorms = Number($("#fDorms").value); st.max = Number($("#fPrice").value); st.onlyFav = false;
+}
+function setOp(op) { st.op = op; $$(".stab").forEach(t => t.classList.toggle("on", t.dataset.op === op)); }
+$$(".stab").forEach(t => t.addEventListener("click", () => { setOp(t.dataset.op); readForm(); render(); }));
+$("#search").addEventListener("submit", e => { e.preventDefault(); readForm(); render(); $("#propiedades").scrollIntoView(); });
+$("#sort").addEventListener("change", e => { st.sort = e.target.value; render(); });
+document.addEventListener("click", e => {
+  if (e.target.closest("#clear")) { Object.assign(st, { comuna: "", type: "", dorms: 0, max: 0, onlyFav: false }); $("#search").reset(); setOp(""); render(); }
+  const v = e.target.closest("[data-view]");
+  if (v) { $$("[data-view]").forEach(b => { const on = b === v; b.classList.toggle("on", on); b.querySelector("img").src = `${II}${b.dataset.view === "grid" ? "grid-2x2" : "list"}-${on ? "l" : "d"}.png`; }); $("#grid").classList.toggle("list", v.dataset.view === "list"); }
+  const c = e.target.closest("[data-comuna]");
+  if (c) { st.comuna = c.dataset.comuna; $("#fComuna").value = st.comuna; render(); $("#propiedades").scrollIntoView(); }
+  const o = e.target.closest("[data-op-link]");
+  if (o) { setOp(o.dataset.opLink); render(); }
+  if (e.target.closest("[data-fav]") && st.onlyFav) render();
+});
+$("#favBtn").addEventListener("click", () => {
+  if (!favs.length) { toast("Aún no guardas propiedades"); return; }
+  st.onlyFav = true; render(); $("#propiedades").scrollIntoView();
+});
+render();
+
+$("#agents").innerHTML = Object.entries(AP_AGENTS).map(([k, a]) => `<article class="agent"><div class="agent-img"><img src="${API}${a.img}" alt="${a.name}" loading="lazy"></div><div class="agent-body"><b>${a.name}</b><span>${a.role}</span><br><a href="${apWa(`Hola ${a.name.split(" ")[0]}, quiero información sobre propiedades.`)}" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-green.png" alt="">Escribirle</a></div></article>`).join("");
+
+$("#sellForm").addEventListener("submit", e => {
+  e.preventDefault(); const f = Object.fromEntries(new FormData(e.target));
+  window.open(apWa(`Hola Altura Propiedades, ${f.operacion.toLowerCase()} mi propiedad y quiero una tasación.\n\nNombre: ${f.nombre}\nTeléfono: ${f.telefono}\nTipo: ${f.tipo}${f.comuna ? `\nComuna: ${f.comuna}` : ""}`), "_blank", "noopener");
+});
+</script>
+</body>
+</html>

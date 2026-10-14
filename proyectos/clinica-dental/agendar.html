@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E2A47">
+<title>Agendar hora — Lumen Dental</title>
+<link rel="icon" type="image/png" href="../../assets/icons/cd/smile-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ld.css?v=2">
+</head>
+<body style="background:var(--sky)">
+<header class="head scrolled" id="head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Lumen Dental, inicio">
+      <svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="13" fill="#14A396"/><path d="M15.2 11.5c-3.3 0-5.6 2.5-5.6 6 0 3.3 1.1 5.8 2 9.4.6 2.8 1.1 6.6 2.9 6.6 1.9 0 1.8-5.3 4-5.3h.1c2.2 0 2.1 5.3 4 5.3 1.8 0 2.3-3.8 2.9-6.6.9-3.6 2-6.1 2-9.4 0-3.5-2.3-6-5.6-6-1.6 0-2.3.8-3.4.8s-1.8-.8-3.3-.8z" fill="#fff"/><path d="M31.5 7.5l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1z" fill="#E6F5F2"/></svg>
+      <span><b>Lumen Dental</b><small>Agenda online</small></span>
+    </a>
+    <div class="head-cta">
+      <a class="btn btn-line" href="index.html"><img src="../../assets/icons/cd/arrow-left-d.png" alt="">Volver</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap book">
+  <section>
+    <span class="pill-label"><img src="../../assets/icons/cd/calendar-check-a.png" alt="">Agenda online</span>
+    <h1>Agenda tu hora</h1>
+    <p class="book-lead">Cuatro pasos y listo. Confirmamos tu reserva por WhatsApp.</p>
+
+    <div class="progress" id="progress">
+      <div class="on"><i></i>Tratamiento</div><div><i></i>Profesional</div><div><i></i>Día y hora</div><div><i></i>Tus datos</div>
+    </div>
+
+    <div class="panel" id="step1">
+      <h2>¿Qué necesitas?</h2>
+      <p>Si no estás seguro, elige "Evaluación y diagnóstico": es sin costo.</p>
+      <div class="opts" id="treatOpts"></div>
+    </div>
+
+    <div class="panel" id="step2" hidden>
+      <h2>Elige profesional</h2>
+      <p>Te mostramos a quienes realizan este tratamiento.</p>
+      <div class="opts" id="docOpts"></div>
+    </div>
+
+    <div class="panel" id="step3" hidden>
+      <h2>Elige día y hora</h2>
+      <p>Horas disponibles para las próximas dos semanas.</p>
+      <div class="days" id="days" role="listbox" aria-label="Días"></div>
+      <div id="slots"></div>
+    </div>
+
+    <div class="panel" id="step4" hidden>
+      <h2>Tus datos</h2>
+      <p>Los usamos solo para confirmar tu hora.</p>
+      <form class="form" id="dataForm">
+        <div class="row">
+          <label>Nombre y apellido<input name="nombre" required autocomplete="name"></label>
+          <label>Teléfono<input name="telefono" required inputmode="tel" autocomplete="tel" placeholder="+56 9 ..."></label>
+        </div>
+        <div class="row">
+          <label>Previsión<select name="prevision"><option>Isapre</option><option>Fonasa</option><option>Particular</option><option>Seguro complementario</option></select></label>
+          <label>¿Primera vez en Lumen?<select name="primera"><option>Sí, es mi primera vez</option><option>No, ya me he atendido</option></select></label>
+        </div>
+        <label>Comentario (opcional)<textarea name="comentario" rows="2" placeholder="Ej.: tengo sensibilidad en una muela"></textarea></label>
+        <label class="check"><input type="checkbox" required> Acepto ser contactado por WhatsApp para confirmar mi hora.</label>
+      </form>
+    </div>
+
+    <div class="panel" id="done" hidden>
+      <div class="done-box">
+        <div class="big"><img src="../../assets/icons/cd/calendar-check-a.png" alt=""></div>
+        <h2>¡Casi listo!</h2>
+        <p>Se abrió WhatsApp con el detalle de tu reserva. Envía el mensaje y te confirmamos en minutos.</p>
+        <a class="btn btn-wa" id="waAgain" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-white.png" alt="">Abrir WhatsApp de nuevo</a>
+        <p style="margin-top:18px"><a href="index.html" style="color:var(--teal);font-weight:800">Volver al inicio</a></p>
+      </div>
+    </div>
+
+    <div class="nav-btns" id="navBtns">
+      <button class="btn btn-line" id="back" hidden><img src="../../assets/icons/cd/arrow-left-d.png" alt="">Atrás</button>
+      <span></span>
+      <button class="btn btn-teal" id="next" disabled>Continuar <img src="../../assets/icons/cd/arrow-right-l.png" alt=""></button>
+    </div>
+  </section>
+
+  <aside class="summary" aria-label="Resumen de tu reserva">
+    <h3>Tu reserva</h3>
+    <div class="sum-row"><img class="ic" src="../../assets/icons/cd/smile-a.png" alt=""><div><small>Tratamiento</small><b id="sTreat" class="ph">Por elegir</b></div></div>
+    <div class="sum-row"><img class="ic" src="../../assets/icons/cd/user-round-a.png" alt=""><div><small>Profesional</small><b id="sDoc" class="ph">Por elegir</b></div></div>
+    <div class="sum-row"><img class="ic" src="../../assets/icons/cd/calendar-a.png" alt=""><div><small>Fecha</small><b id="sDate" class="ph">Por elegir</b></div></div>
+    <div class="sum-row"><img class="ic" src="../../assets/icons/cd/clock-a.png" alt=""><div><small>Hora</small><b id="sTime" class="ph">Por elegir</b></div></div>
+    <div class="sum-row"><img class="ic" src="../../assets/icons/cd/wallet-a.png" alt=""><div><small>Valor referencial</small><b id="sPrice" class="ph">—</b></div></div>
+    <p class="sum-note">Proyecto de demostración: las horas son de ejemplo y la reserva se confirma por WhatsApp.</p>
+  </aside>
+</main>
+
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+<script>
+const q = new URLSearchParams(location.search);
+const st = { step: 1, t: LD_TREATMENTS.find(x => x.id === q.get("t")) || null, d: null, any: false, date: null, time: null };
+const preDoc = LD_TEAM.find(x => x.id === q.get("d"));
+if (preDoc) { st.d = preDoc; if (!st.t) st.t = LD_TREATMENTS.find(x => x.spec === preDoc.spec) || LD_TREATMENTS[0]; }
+
+const docsFor = t => t.spec === "general" ? LD_TEAM.filter(d => d.spec === "general" || d.id === "carolina") : LD_TEAM.filter(d => d.spec === t.spec);
+const docKey = () => st.any ? "any" : st.d ? st.d.id : "any";
+const fmtDate = ds => new Date(ds + "T12:00").toLocaleDateString("es-CL", { weekday: "long", day: "numeric", month: "long" });
+
+function setSum(id, text) { const el = $(id); el.textContent = text || "Por elegir"; el.classList.toggle("ph", !text); }
+function summary() {
+  setSum("#sTreat", st.t && st.t.name);
+  setSum("#sDoc", st.any ? "Cualquiera disponible" : st.d && st.d.name);
+  setSum("#sDate", st.date && fmtDate(st.date));
+  setSum("#sTime", st.time);
+  const p = $("#sPrice"); p.textContent = st.t ? (st.t.price ? `Desde ${ldMoney(st.t.price)}` : st.t.priceLabel) : "—"; p.classList.toggle("ph", !st.t);
+}
+function canNext() {
+  return st.step === 1 ? !!st.t : st.step === 2 ? (st.any || !!st.d) : st.step === 3 ? !!(st.date && st.time) : true;
+}
+function go(n) {
+  st.step = n;
+  ["#step1", "#step2", "#step3", "#step4"].forEach((s, i) => $(s).hidden = i + 1 !== n);
+  $$("#progress div").forEach((d, i) => { d.classList.toggle("on", i + 1 === n); d.classList.toggle("done", i + 1 < n); });
+  $("#back").hidden = n === 1;
+  $("#next").innerHTML = n === 4 ? `<img src="../../assets/icons/whatsapp-white.png" alt="">Confirmar por WhatsApp` : `Continuar <img src="${CI}arrow-right-l.png" alt="">`;
+  $("#next").className = n === 4 ? "btn btn-wa" : "btn btn-teal";
+  if (n === 2) renderDocs();
+  if (n === 3) renderDays();
+  $("#next").disabled = !canNext();
+  summary();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+/* Paso 1 */
+function renderTreats() {
+  $("#treatOpts").innerHTML = LD_TREATMENTS.map(t => `<button class="opt ${st.t === t ? "on" : ""}" data-t="${t.id}">
+    <img class="th" src="${LDI}${t.img}" alt=""><span><b>${t.name}</b><small>${t.price ? "Desde " + ldMoney(t.price) : t.priceLabel} · ${t.duration}</small></span></button>`).join("");
+}
+$("#treatOpts").addEventListener("click", e => {
+  const b = e.target.closest("[data-t]"); if (!b) return;
+  st.t = LD_TREATMENTS.find(x => x.id === b.dataset.t);
+  if (st.d && !docsFor(st.t).includes(st.d)) st.d = null;
+  st.date = st.time = null; renderTreats(); $("#next").disabled = !canNext(); summary();
+});
+
+/* Paso 2 */
+function renderDocs() {
+  const docs = docsFor(st.t);
+  $("#docOpts").innerHTML = `<button class="opt ${st.any ? "on" : ""}" data-doc="any"><span class="any"><img src="${CI}users-a.png" alt=""></span><span><b>Cualquiera disponible</b><small>La hora más pronta</small></span></button>` +
+    docs.map(d => `<button class="opt ${st.d === d && !st.any ? "on" : ""}" data-doc="${d.id}"><img class="av" src="${LDI}${d.img}" alt=""><span><b>${d.name}</b><small>${d.role}</small></span></button>`).join("");
+}
+$("#docOpts").addEventListener("click", e => {
+  const b = e.target.closest("[data-doc]"); if (!b) return;
+  st.any = b.dataset.doc === "any"; st.d = st.any ? null : LD_TEAM.find(x => x.id === b.dataset.doc);
+  st.date = st.time = null; renderDocs(); $("#next").disabled = !canNext(); summary();
+});
+
+/* Paso 3 */
+function renderDays() {
+  const now = new Date(), out = [];
+  for (let i = 0; i < 14; i++) {
+    const d = new Date(now); d.setDate(now.getDate() + i);
+    const ds = ldISO(d);
+    const slots = ldSlots(ds, docKey()).filter(s => i > 0 || s > `${String(now.getHours() + 1).padStart(2, "0")}:00`);
+    out.push(`<button class="day ${st.date === ds ? "on" : ""}" data-date="${ds}" ${slots.length ? "" : "disabled"}><small>${i === 0 ? "Hoy" : d.toLocaleDateString("es-CL", { weekday: "short" }).replace(".", "")}</small><b>${d.getDate()}</b><span>${slots.length ? slots.length + " horas" : "Sin horas"}</span></button>`);
+  }
+  $("#days").innerHTML = out.join("");
+  if (!st.date) { const first = $("#days .day:not([disabled])"); if (first) st.date = first.dataset.date, first.classList.add("on"); }
+  renderSlots();
+}
+function renderSlots() {
+  const today = ldISO(new Date()), now = new Date();
+  const slots = ldSlots(st.date, docKey()).filter(s => st.date !== today || s > `${String(now.getHours() + 1).padStart(2, "0")}:00`);
+  if (!slots.length) { $("#slots").innerHTML = `<div class="empty-slots">No quedan horas este día. Prueba con otro.</div>`; return; }
+  const am = slots.filter(s => s < "13:00"), pm = slots.filter(s => s >= "13:00");
+  const grp = (label, arr) => arr.length ? `<div class="slot-group">${label}</div><div class="slots">${arr.map(s => `<button class="slot ${st.time === s ? "on" : ""}" data-time="${s}">${s}</button>`).join("")}</div>` : "";
+  $("#slots").innerHTML = grp("Mañana", am) + grp("Tarde", pm);
+  summary();
+}
+$("#days").addEventListener("click", e => {
+  const b = e.target.closest("[data-date]"); if (!b) return;
+  st.date = b.dataset.date; st.time = null;
+  $$(".day").forEach(d => d.classList.toggle("on", d === b));
+  renderSlots(); $("#next").disabled = !canNext();
+});
+$("#slots").addEventListener("click", e => {
+  const b = e.target.closest("[data-time]"); if (!b) return;
+  st.time = b.dataset.time; $$(".slot").forEach(s => s.classList.toggle("on", s === b));
+  $("#next").disabled = !canNext(); summary();
+});
+
+/* Navegación */
+$("#back").addEventListener("click", () => go(st.step - 1));
+$("#next").addEventListener("click", () => {
+  if (st.step < 4) return go(st.step + 1);
+  const form = $("#dataForm"); if (!form.reportValidity()) return;
+  const f = Object.fromEntries(new FormData(form));
+  const msg = `Hola Lumen Dental, quiero reservar esta hora:\n\n• Tratamiento: ${st.t.name}\n• Profesional: ${st.any ? "Cualquiera disponible" : st.d.name}\n• Fecha: ${fmtDate(st.date)}\n• Hora: ${st.time}\n\nNombre: ${f.nombre}\nTeléfono: ${f.telefono}\nPrevisión: ${f.prevision}\n${f.primera}${f.comentario ? `\nComentario: ${f.comentario}` : ""}`;
+  const url = ldWa(msg); window.open(url, "_blank", "noopener");
+  $("#waAgain").href = url;
+  ["#step1", "#step2", "#step3", "#step4", "#navBtns"].forEach(s => $(s).hidden = true);
+  $("#done").hidden = false; $$("#progress div").forEach(d => { d.classList.remove("on"); d.classList.add("done"); });
+});
+
+renderTreats();
+go(st.t && st.d ? 3 : st.t ? 2 : 1);
+</script>
+</body>
+</html>

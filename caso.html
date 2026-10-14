@@ -7,8 +7,8 @@
 <title>Caso de estudio — Felipe Antunez Mardones</title>
 <link rel="icon" type="image/png" href="assets/icons/pf/code-a.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:ital,wght@0,800;1,800&family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/portfolio.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:ital,wght@0,800;1,800&family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=DM+Sans:wght@400;600&family=Sora:wght@600&family=Nunito+Sans:wght@400&family=Space+Grotesk:wght@500&family=Manrope:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/portfolio.css?v=5">
 <link rel="stylesheet" href="assets/css/caso.css?v=4">
 </head>
 <body>
@@ -131,9 +131,31 @@ const CASES = {
     phones: ["paraisos-sur-movil", "paraisos-sur-destino-movil"],
     detail: "paraisos-sur-destino-desktop", detailUrl: "paraisossur.cl/destino", detailCap: "Página de destino: datos clave, galería, itinerario, mapa y formulario de cotización.",
     features: [["search", "Buscador de viajes", "Filtra por país, tipo de experiencia y duración."], ["map", "6 destinos", "Galería ampliable, imperdibles y qué llevar en cada uno."], ["calendar", "Itinerarios", "Línea de tiempo con horarios o días de viaje."], ["layers", "Paquetes comparables", "Tres propuestas con lo que incluye cada una."], ["sun", "Guía de temporadas", "Qué ofrece el sur en cada estación del año."], ["message-circle", "Cotización directa", "Formulario que envía destino, fecha y viajeros por WhatsApp."]]
+  },
+  "clinica-dental": {
+    title: "Lumen Dental", sector: "Salud", kind: "Sitio de clínica dental", url: "lumendental.cl", live: "proyectos/clinica-dental/index.html",
+    lead: "Un sitio para una clínica dental que transmite confianza y permite agendar una hora en menos de un minuto, eligiendo tratamiento, especialista, día y hora.",
+    challenge: "Muchas clínicas pierden pacientes porque agendar exige llamar en horario de oficina. Además, ir al dentista genera nervios: el sitio tenía que calmar, explicar los tratamientos con claridad y mostrar valores de referencia sin sorpresas.",
+    solution: "Diseñé una identidad luminosa con blanco, menta y azul profundo, formas redondeadas y fotografía real de la clínica. El corazón del sitio es una agenda en cuatro pasos con horas disponibles por día, un resumen siempre visible y confirmación por WhatsApp. Cada tratamiento tiene su ficha con lo que incluye, duración y valor desde.",
+    colors: [["#0E2A47", "Azul profundo"], ["#14A396", "Menta"], ["#E6F5F2", "Menta claro"], ["#F4F8FB", "Cielo"], ["#FFFFFF", "Blanco"]],
+    fonts: [["Sora", "600", "normal", "none", "Títulos"], ["Nunito Sans", "400", "normal", "none", "Textos y formularios"]],
+    phones: ["clinica-dental-movil", "clinica-dental-agenda-movil"],
+    detail: "clinica-dental-agenda-desktop", detailUrl: "lumendental.cl/agendar", detailCap: "Agenda online: tratamiento, profesional, día y hora, con resumen de la reserva siempre visible.",
+    features: [["calendar", "Agenda en 4 pasos", "Tratamiento, especialista, día y hora, con confirmación por WhatsApp."], ["clock", "Horas por día", "Muestra la disponibilidad de las próximas dos semanas."], ["layers", "Fichas de tratamiento", "Qué incluye, duración y valor de referencia de cada uno."], ["users", "Especialistas", "Perfil de cada profesional con agenda directa."], ["credit-card", "Convenios y pagos", "Isapres, cuotas y formas de pago en un solo lugar."], ["smartphone", "Pensado para celular", "Agenda rápida desde la portada y botón de WhatsApp siempre visible."]]
+  },
+  "inmobiliaria": {
+    title: "Altura Propiedades", sector: "Inmobiliaria", kind: "Portal de corredora", url: "alturapropiedades.cl", live: "proyectos/inmobiliaria/index.html",
+    lead: "Un portal para una corredora de propiedades en Santiago: buscador con filtros, fichas completas, simulador de dividendo y agenda de visitas con el corredor a cargo.",
+    challenge: "Las corredoras pequeñas dependen de portales masivos donde sus propiedades se pierden entre miles. Necesitaban un sitio propio, con su marca, que permitiera buscar como en un gran portal y que convirtiera visitas en citas reales.",
+    solution: "Creé una identidad arquitectónica con arena, grafito y azul cobalto, tipografía geométrica y fotografía a pantalla completa. El buscador filtra por operación, comuna, tipo, dormitorios y precio; cada ficha incluye galería ampliable, ficha técnica, mapa, simulador de dividendo en UF y un formulario para agendar visita directamente con el corredor.",
+    colors: [["#16181B", "Grafito"], ["#2B44E0", "Cobalto"], ["#F3EFE8", "Arena"], ["#E8E1D5", "Piedra"], ["#AEBBFF", "Lavanda"]],
+    fonts: [["Space Grotesk", "500", "normal", "none", "Títulos"], ["Manrope", "400", "normal", "none", "Textos y formularios"]],
+    phones: ["inmobiliaria-movil", "inmobiliaria-propiedad-movil"],
+    detail: "inmobiliaria-propiedad-desktop", detailUrl: "alturapropiedades.cl/propiedad", detailCap: "Ficha de propiedad: galería, datos clave, precio en UF y pesos, y agenda de visita con el corredor.",
+    features: [["search", "Buscador con filtros", "Operación, comuna, tipo, dormitorios y precio máximo."], ["bed-double", "Fichas completas", "Galería ampliable, ficha técnica, características y mapa."], ["ruler", "Simulador de dividendo", "Calcula pie, crédito y dividendo mensual en UF y pesos."], ["heart", "Favoritas", "Guarda propiedades para compararlas después."], ["calendar", "Agenda de visitas", "Día y horario enviados directo al corredor por WhatsApp."], ["message-circle", "Tasación online", "Formulario para propietarios que quieren vender o arrendar."]]
   }
 };
-const ORDER = ["zona-sport", "mesa-noble", "paraisos-sur"];
+const ORDER = ["zona-sport", "mesa-noble", "paraisos-sur", "clinica-dental", "inmobiliaria"];
 const $ = s => document.querySelector(s);
 const key = CASES[new URLSearchParams(location.search).get("p")] ? new URLSearchParams(location.search).get("p") : "zona-sport";
 const c = CASES[key], CAP = "assets/img/capturas/";

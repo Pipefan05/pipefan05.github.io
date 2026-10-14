@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E2A47">
+<meta name="description" content="Lumen Dental: clínica dental en Providencia. Ortodoncia, implantes, estética y odontopediatría. Agenda tu hora online.">
+<title>Lumen Dental — Clínica dental en Providencia</title>
+<link rel="icon" type="image/png" href="../../assets/icons/cd/smile-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ld.css?v=2">
+</head>
+<body>
+<div class="topline">
+  <div class="wrap">
+    <span class="hide-sm"><img src="../../assets/icons/cd/map-pin-l.png" alt="">Providencia, Santiago · A pasos del metro</span>
+    <span><img src="../../assets/icons/cd/clock-l.png" alt="">Lun a vie 9:00–20:00 · Sáb 9:00–14:00</span>
+    <span class="hide-sm"><img src="../../assets/icons/cd/heart-pulse-l.png" alt="">Urgencias: <a data-wa="urgencia" target="_blank" rel="noopener">escríbenos</a></span>
+  </div>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Lumen Dental, inicio">
+      <svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="13" fill="#14A396"/><path d="M15.2 11.5c-3.3 0-5.6 2.5-5.6 6 0 3.3 1.1 5.8 2 9.4.6 2.8 1.1 6.6 2.9 6.6 1.9 0 1.8-5.3 4-5.3h.1c2.2 0 2.1 5.3 4 5.3 1.8 0 2.3-3.8 2.9-6.6.9-3.6 2-6.1 2-9.4 0-3.5-2.3-6-5.6-6-1.6 0-2.3.8-3.4.8s-1.8-.8-3.3-.8z" fill="#fff"/><path d="M31.5 7.5l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1z" fill="#E6F5F2"/></svg>
+      <span><b>Lumen Dental</b><small>Clínica dental</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a><a href="#equipo">Especialistas</a><a href="#clinica">La clínica</a><a href="#pagos">Convenios</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-line" data-wa="general" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-green.png" alt="">WhatsApp</a>
+      <a class="btn btn-teal" href="agendar.html"><img src="../../assets/icons/cd/calendar-check-l.png" alt=""><span>Agendar hora</span></a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><img src="../../assets/icons/cd/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill-label"><img src="../../assets/icons/cd/sparkles-a.png" alt="">Primera evaluación sin costo</span>
+        <h1>Tu sonrisa en <span>manos expertas</span>, sin miedo ni sorpresas.</h1>
+        <p class="hero-lead">Especialistas en ortodoncia, implantes, estética y odontopediatría. Te explicamos cada paso y recibes tu presupuesto por escrito antes de empezar.</p>
+        <div class="hero-actions">
+          <a class="btn btn-teal" href="agendar.html"><img src="../../assets/icons/cd/calendar-check-l.png" alt="">Agendar mi hora</a>
+          <a class="btn btn-line" href="#tratamientos">Ver tratamientos</a>
+        </div>
+        <div class="hero-points">
+          <div><img src="../../assets/icons/cd/shield-check-a.png" alt="">Presupuesto sin sorpresas</div>
+          <div><img src="../../assets/icons/cd/credit-card-a.png" alt="">Hasta 12 cuotas</div>
+          <div><img src="../../assets/icons/cd/users-a.png" alt="">Niños y adultos</div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-photo"><img src="../../assets/img/clinica-dental/hero.jpg" alt="Dentista conversando con una paciente en la clínica" fetchpriority="high"></div>
+        <div class="float-card fc-1"><span class="ic"><img src="../../assets/icons/cd/calendar-check-a.png" alt=""></span><div><small>Próxima hora disponible</small><b id="nextSlot">Hoy</b></div></div>
+        <div class="float-card fc-2"><div class="stack"><img src="../../assets/img/clinica-dental/dra-carolina.jpg" alt=""><img src="../../assets/img/clinica-dental/dr-andres.jpg" alt=""><img src="../../assets/img/clinica-dental/dra-javiera.jpg" alt=""></div><div><small>Equipo</small><b>5 especialistas</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap quick">
+    <form class="quick-box" id="quick" aria-label="Agenda rápida">
+      <div class="q-field"><img src="../../assets/icons/cd/smile-a.png" alt=""><div><label for="qTreat">¿Qué necesitas?</label><select id="qTreat"></select></div></div>
+      <div class="q-field"><img src="../../assets/icons/cd/user-round-a.png" alt=""><div><label for="qDoc">Profesional</label><select id="qDoc"><option value="">Cualquiera disponible</option></select></div></div>
+      <button class="btn btn-navy" type="submit"><img src="../../assets/icons/cd/search-l.png" alt="">Ver horas</button>
+    </form>
+  </div>
+
+  <section class="strip" aria-label="Beneficios">
+    <div class="wrap">
+      <div><img src="../../assets/icons/cd/scan-line-a.png" alt=""><p><b>Tecnología digital</b><span>Escáner 3D y radiografía digital</span></p></div>
+      <div><img src="../../assets/icons/cd/shield-plus-a.png" alt=""><p><b>Esterilización certificada</b><span>Protocolos en cada atención</span></p></div>
+      <div><img src="../../assets/icons/cd/car-a.png" alt=""><p><b>Estacionamiento</b><span>Para pacientes, sin costo</span></p></div>
+      <div><img src="../../assets/icons/cd/heart-pulse-a.png" alt=""><p><b>Urgencias</b><span>Atención el mismo día</span></p></div>
+    </div>
+  </section>
+
+  <section class="section" id="tratamientos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="pill-label">Tratamientos</span><h2>Todo lo que tu sonrisa <span>necesita</span>, en un solo lugar.</h2></div>
+        <p>Valores referenciales "desde". Tu presupuesto final se define en la evaluación, que es sin costo.</p>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div class="treat-grid" id="treatGrid"></div>
+    </div>
+  </section>
+
+  <section class="section sky">
+    <div class="wrap">
+      <div class="sec-head center"><span class="pill-label">Tu primera visita</span><h2>Así de simple es <span>empezar</span></h2><p>Sabemos que ir al dentista puede generar nervios. Por eso cada paso es claro y sin apuros.</p></div>
+      <div class="visit">
+        <div class="vstep"><span class="n">1</span><h3>Agenda online</h3><p>Elige tratamiento, profesional y la hora que más te acomode en menos de un minuto.</p></div>
+        <div class="vstep"><span class="n">2</span><h3>Evaluación</h3><p>Revisión completa con radiografía digital. Conversamos tus dudas y objetivos.</p></div>
+        <div class="vstep"><span class="n">3</span><h3>Presupuesto claro</h3><p>Recibes tu plan por escrito, con etapas, plazos y alternativas de pago.</p></div>
+        <div class="vstep"><span class="n">4</span><h3>Tratamiento</h3><p>Comenzamos cuando tú decidas, con seguimiento y controles incluidos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="equipo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="pill-label">Especialistas</span><h2>Un equipo que te <span>acompaña</span> de verdad</h2></div>
+        <p>Cada especialista se dedica a su área. Puedes agendar directamente con quien prefieras.</p>
+      </div>
+      <div class="team" id="team"></div>
+    </div>
+  </section>
+
+  <section class="section sky" id="clinica">
+    <div class="wrap clinic">
+      <div class="clinic-gal">
+        <img src="../../assets/img/clinica-dental/box-1.jpg" alt="Box de atención luminoso con sillón dental" loading="lazy">
+        <img src="../../assets/img/clinica-dental/recepcion.jpg" alt="Recepción de la clínica" loading="lazy">
+        <img src="../../assets/img/clinica-dental/sala-espera.jpg" alt="Sala de espera con sillones" loading="lazy">
+      </div>
+      <div>
+        <span class="pill-label">La clínica</span>
+        <h2>Espacios cómodos y <span>tecnología</span> que se nota</h2>
+        <p>Diseñamos la clínica para que te sientas tranquilo desde que entras: boxes luminosos, sala de espera con espacio para niños y equipos de última generación.</p>
+        <div class="tech">
+          <div><img src="../../assets/icons/cd/scan-line-a.png" alt=""><p><b>Escáner intraoral 3D</b><span>Sin pastas ni moldes incómodos</span></p></div>
+          <div><img src="../../assets/icons/cd/microscope-a.png" alt=""><p><b>Radiografía digital</b><span>Menos radiación, resultados al instante</span></p></div>
+          <div><img src="../../assets/icons/cd/shield-plus-a.png" alt=""><p><b>Esterilización</b><span>Autoclave y trazabilidad de instrumental</span></p></div>
+          <div><img src="../../assets/icons/cd/baby-a.png" alt=""><p><b>Box infantil</b><span>Ambiente pensado para los más pequeños</span></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pagos">
+    <div class="wrap pay">
+      <div class="pay-card navy">
+        <h3>Convenios y previsión</h3>
+        <p>Trabajamos con las principales Isapres y seguros complementarios de salud. Te ayudamos con los formularios para tu reembolso.</p>
+        <ul class="pay-list">
+          <li><img src="../../assets/icons/cd/badge-check-a.png" alt="">Isapres y seguros complementarios</li>
+          <li><img src="../../assets/icons/cd/badge-check-a.png" alt="">Convenios con empresas</li>
+          <li><img src="../../assets/icons/cd/badge-check-a.png" alt="">Descuento para grupo familiar</li>
+        </ul>
+      </div>
+      <div class="pay-card mint">
+        <h3>Formas de pago</h3>
+        <p style="color:var(--soft)">Paga tu tratamiento de la forma que más te acomode, sin intereses en tratamientos largos.</p>
+        <div class="chips"><span>Débito</span><span>Crédito</span><span>Hasta 12 cuotas</span><span>Transferencia</span><span>Efectivo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sky" id="preguntas">
+    <div class="wrap faq-wrap">
+      <div>
+        <span class="pill-label">Preguntas frecuentes</span>
+        <h2>Resolvemos tus dudas</h2>
+        <p>¿No encuentras lo que buscas? Escríbenos y te respondemos el mismo día.</p>
+        <a class="btn btn-wa" data-wa="general" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-white.png" alt="">Escribir por WhatsApp</a>
+      </div>
+      <div class="faq">
+        <details open><summary>¿La primera evaluación tiene costo?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>No. La evaluación incluye examen clínico, radiografías digitales y un presupuesto por escrito, sin costo ni compromiso.</p></details>
+        <details><summary>¿Atienden urgencias?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>Sí. Si tienes dolor o una pieza fracturada, escríbenos por WhatsApp y te buscamos una hora el mismo día.</p></details>
+        <details><summary>¿Desde qué edad atienden niños?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>Recomendamos la primera visita al aparecer el primer diente o antes del primer año. Nuestra odontopediatra adapta cada consulta a la edad del niño.</p></details>
+        <details><summary>¿Cuánto duran los alineadores invisibles?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>Depende de cada caso, generalmente entre 6 y 18 meses. Con el escáner 3D te mostramos una simulación del resultado antes de empezar.</p></details>
+        <details><summary>¿Puedo pagar en cuotas?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>Sí, con tarjeta de crédito hasta 12 cuotas. En ortodoncia e implantes también puedes pagar por etapas.</p></details>
+        <details><summary>¿Cómo cambio o cancelo mi hora?<span class="ic"><img src="../../assets/icons/cd/plus-d.png" alt=""></span></summary><p>Escríbenos por WhatsApp con al menos 24 horas de anticipación y te ayudamos a reagendar.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap loc">
+      <div class="loc-card">
+        <h2>¿Cómo llegar?</h2>
+        <div class="loc-row"><img src="../../assets/icons/cd/map-pin-a.png" alt=""><div><small>Dirección</small><span id="addr"></span></div></div>
+        <div class="loc-row"><img src="../../assets/icons/cd/clock-a.png" alt=""><div><small>Horario</small><dl id="hours"></dl></div></div>
+        <div class="loc-row"><img src="../../assets/icons/cd/car-a.png" alt=""><div><small>Estacionamiento</small><span>Disponible para pacientes</span></div></div>
+        <a class="btn btn-teal" href="agendar.html" style="margin-top:auto"><img src="../../assets/icons/cd/calendar-check-l.png" alt="">Agendar hora</a>
+      </div>
+      <div class="loc-map"><iframe title="Mapa de Providencia, Santiago" src="https://maps.google.com/maps?q=Providencia%2C%20Santiago%2C%20Chile&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>Tu primera evaluación es sin costo</h2><p>Agenda hoy y sal de la consulta con tu plan de tratamiento y presupuesto por escrito.</p></div>
+      <a class="btn" href="agendar.html"><img src="../../assets/icons/cd/calendar-check-d.png" alt="">Agendar ahora</a>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Lumen Dental">
+          <svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="13" fill="#14A396"/><path d="M15.2 11.5c-3.3 0-5.6 2.5-5.6 6 0 3.3 1.1 5.8 2 9.4.6 2.8 1.1 6.6 2.9 6.6 1.9 0 1.8-5.3 4-5.3h.1c2.2 0 2.1 5.3 4 5.3 1.8 0 2.3-3.8 2.9-6.6.9-3.6 2-6.1 2-9.4 0-3.5-2.3-6-5.6-6-1.6 0-2.3.8-3.4.8s-1.8-.8-3.3-.8z" fill="#fff"/><path d="M31.5 7.5l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1z" fill="#E6F5F2"/></svg>
+          <span><b>Lumen Dental</b><small>Clínica dental</small></span>
+        </a>
+        <p>Odontología integral para toda la familia en Providencia, con especialistas y tecnología digital.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../assets/icons/cd/instagram-l.png" alt=""></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="../../assets/icons/cd/facebook-l.png" alt=""></a>
+          <a data-wa="general" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp-white.png" alt=""></a>
+        </div>
+      </div>
+      <div><h4>Tratamientos</h4><ul><li><a href="#tratamientos">Ortodoncia</a></li><li><a href="#tratamientos">Implantes</a></li><li><a href="#tratamientos">Estética dental</a></li><li><a href="#tratamientos">Odontopediatría</a></li></ul></div>
+      <div><h4>Clínica</h4><ul><li><a href="#equipo">Especialistas</a></li><li><a href="#clinica">Instalaciones</a></li><li><a href="#pagos">Convenios</a></li><li><a href="#preguntas">Preguntas frecuentes</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a data-wa="general" target="_blank" rel="noopener">+56 9 5226 2331</a></li><li>Providencia, Santiago</li><li><a href="agendar.html">Agenda online</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year"></span> Lumen Dental · Clínica ficticia, proyecto de demostración.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box">
+    <div class="modal-img"><img id="mImg" src="" alt=""></div>
+    <div class="modal-body">
+      <button class="modal-close" id="mClose" aria-label="Cerrar"><img src="../../assets/icons/cd/x-d.png" alt=""></button>
+      <span class="pill-label" id="mSpec"></span>
+      <h3 id="mTitle"></h3>
+      <p id="mText"></p>
+      <ul class="inc" id="mInc"></ul>
+      <div class="modal-meta"><div><small>Valor</small><b id="mPrice"></b></div><div><small>Duración</small><b id="mDur"></b></div></div>
+      <a class="btn btn-teal block" id="mBook"><img src="../../assets/icons/cd/calendar-check-l.png" alt="">Agendar este tratamiento</a>
+    </div>
+  </div>
+</div>
+
+<a class="wa-float" data-wa="general" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><img src="../../assets/icons/whatsapp-badge.png" alt=""><span>¿Dudas? Escríbenos</span></a>
+
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+<script>
+const SPEC = { todos: "Todos", general: "General", ortodoncia: "Ortodoncia", implantologia: "Implantes", estetica: "Estética", pediatria: "Niños" };
+const priceHTML = t => t.price ? `<small>Desde</small><b>${ldMoney(t.price)}${t.priceUnit ? ` <span style="font:600 12px var(--sans);color:var(--muted)">${t.priceUnit}</span>` : ""}</b>` : `<small>Valor</small><b class="free">${t.priceLabel}</b>`;
+
+/* Pestañas y tarjetas */
+$("#tabs").innerHTML = Object.entries(SPEC).map(([k, v], i) => `<button class="tab ${i ? "" : "on"}" data-spec="${k}">${v}</button>`).join("");
+function renderTreat(spec) {
+  const rows = spec === "todos" ? LD_TREATMENTS : LD_TREATMENTS.filter(t => t.spec === spec);
+  $("#treatGrid").innerHTML = rows.map(t => `<article class="treat">
+    <div class="treat-img"><img src="${LDI}${t.img}" alt="${t.name}" loading="lazy"><span class="dur"><img src="${CI}clock-d.png" alt="">${t.duration}</span></div>
+    <div class="treat-body"><h3>${t.name}</h3><p>${t.short}</p>
+      <div class="treat-foot"><div class="price">${priceHTML(t)}</div><button class="more" data-open="${t.id}">Ver detalle <img src="${CI}arrow-right-a.png" alt=""></button></div>
+    </div></article>`).join("");
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("[data-spec]"); if (!b) return; $$(".tab").forEach(t => t.classList.toggle("on", t === b)); renderTreat(b.dataset.spec); });
+renderTreat("todos");
+
+/* Modal */
+const modal = $("#modal");
+function openTreat(id) {
+  const t = LD_TREATMENTS.find(x => x.id === id); if (!t) return;
+  $("#mImg").src = LDI + t.img; $("#mImg").alt = t.name;
+  $("#mSpec").textContent = SPEC[t.spec] || "General";
+  $("#mTitle").textContent = t.name; $("#mText").textContent = t.short;
+  $("#mInc").innerHTML = t.includes.map(i => `<li><img src="${CI}check-a.png" alt="">${i}</li>`).join("");
+  $("#mPrice").textContent = t.price ? `Desde ${ldMoney(t.price)}${t.priceUnit ? " " + t.priceUnit : ""}` : t.priceLabel;
+  $("#mDur").textContent = t.duration;
+  $("#mBook").href = `agendar.html?t=${t.id}`;
+  modal.classList.add("open"); document.body.classList.add("locked");
+}
+const closeModal = () => { modal.classList.remove("open"); document.body.classList.remove("locked"); };
+document.addEventListener("click", e => { const o = e.target.closest("[data-open]"); if (o) openTreat(o.dataset.open); });
+$("#mClose").addEventListener("click", closeModal);
+modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+/* Equipo */
+$("#team").innerHTML = LD_TEAM.map(d => `<article class="doc">
+  <div class="doc-img"><img src="${LDI}${d.img}" alt="${d.name}" loading="lazy"></div>
+  <div class="doc-body"><h3>${d.name}</h3><span class="role">${d.role}</span><p>${d.bio}</p><span class="yrs">${d.years} años de experiencia</span>
+  <a class="btn btn-soft" href="agendar.html?d=${d.id}">Agendar</a></div></article>`).join("");
+
+/* Agenda rápida */
+$("#qTreat").innerHTML = LD_TREATMENTS.map(t => `<option value="${t.id}">${t.name}</option>`).join("");
+$("#qDoc").innerHTML += LD_TEAM.map(d => `<option value="${d.id}">${d.name}</option>`).join("");
+$("#quick").addEventListener("submit", e => { e.preventDefault(); location.href = `agendar.html?t=${$("#qTreat").value}${$("#qDoc").value ? "&d=" + $("#qDoc").value : ""}`; });
+
+/* Próxima hora disponible */
+(function () {
+  const now = new Date();
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(now); d.setDate(now.getDate() + i);
+    const ds = ldISO(d);
+    const slots = ldSlots(ds, "any").filter(s => i > 0 || s > `${String(now.getHours() + 1).padStart(2, "0")}:00`);
+    if (slots.length) { $("#nextSlot").textContent = `${i === 0 ? "Hoy" : i === 1 ? "Mañana" : d.toLocaleDateString("es-CL", { weekday: "long" })} · ${slots[0]}`; break; }
+  }
+})();
+
+/* Ubicación */
+$("#addr").textContent = LD.address;
+$("#hours").innerHTML = LD.hours.map(([d, h]) => `<dt>${d}</dt><dd>${h}</dd>`).join("");
+</script>
+</body>
+</html>

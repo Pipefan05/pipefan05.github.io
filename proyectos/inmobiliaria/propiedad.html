@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16181B">
+<title>Propiedad — Altura Propiedades</title>
+<link rel="icon" type="image/png" href="../../assets/icons/in/building-2-a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/ap.css?v=2">
+</head>
+<body>
+<header class="head solid" id="head" data-solid="1">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Altura Propiedades, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#2B44E0"/><path d="M9 30V19.5L20 10l11 9.5V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M15.5 30v-7.5h9V30" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M27 8.5h4.5V13" fill="none" stroke="#AEBBFF" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><b>Altura</b><small>Propiedades</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html#propiedades">Propiedades</a><a href="index.html#comunas">Comunas</a><a href="index.html#vender">Vende o arrienda</a><a href="index.html#equipo">Equipo</a>
+    </nav>
+    <div class="head-tools">
+      <a class="btn btn-blue" href="index.html#vender">Publica tu propiedad</a>
+      <button class="icon-btn burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><img class="lt" src="../../assets/icons/in/menu-l.png" alt=""><img class="dk" src="../../assets/icons/in/menu-d.png" alt=""></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap pd">
+  <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><img src="../../assets/icons/in/chevron-right-d.png" alt=""><a href="index.html#propiedades" id="crOp"></a><img src="../../assets/icons/in/chevron-right-d.png" alt=""><span id="crComuna"></span></nav>
+
+  <div class="pd-top">
+    <div>
+      <div class="card-tags" style="position:static" id="tags"></div>
+      <h1 id="title"></h1>
+      <p class="pd-loc"><img src="../../assets/icons/in/map-pin-a.png" alt=""><span id="loc"></span></p>
+    </div>
+    <div class="pd-actions">
+      <button id="favBig"><img src="../../assets/icons/in/heart-d.png" alt=""><span>Guardar</span></button>
+      <button id="share"><img src="../../assets/icons/in/share-2-d.png" alt=""><span>Compartir</span></button>
+    </div>
+  </div>
+
+  <div class="mosaic" id="mosaic"></div>
+
+  <div class="pd-grid">
+    <div>
+      <div class="keyspecs" id="keyspecs"></div>
+
+      <section class="block"><h2>Descripción</h2><p id="desc"></p></section>
+      <section class="block"><h2>Características</h2><ul class="feat" id="feat"></ul></section>
+      <section class="block"><h2>Ficha técnica</h2><table class="tbl" id="tbl"></table></section>
+      <section class="block" id="calcBlock">
+        <h2>Simula tu dividendo</h2>
+        <div class="calc">
+          <div class="calc-grid">
+            <label><span>Pie <output id="oPie">20%</output></span><input type="range" id="pie" min="10" max="50" step="5" value="20"></label>
+            <label><span>Plazo <output id="oAnos">25 años</output></span><input type="range" id="anos" min="10" max="30" step="5" value="25"></label>
+            <label><span>Tasa anual <output id="oTasa">4,5%</output></span><input type="range" id="tasa" min="3" max="7" step="0.1" value="4.5"></label>
+          </div>
+          <div class="calc-out">
+            <div class="main"><small>Dividendo mensual</small><b id="rDiv"></b></div>
+            <div><small>Pie</small><b id="rPie"></b></div>
+            <div><small>Crédito</small><b id="rCred"></b></div>
+          </div>
+          <p class="calc-note">Simulación referencial sin seguros ni gastos operacionales. Valor UF usado: <span id="ufv"></span>. Consulta tu evaluación con un banco.</p>
+        </div>
+      </section>
+      <section class="block"><h2>Ubicación</h2><div class="map-box"><iframe id="map" title="Mapa de la comuna" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><p style="font-size:14px;margin-top:10px">Por seguridad mostramos la comuna. La dirección exacta se entrega al agendar la visita.</p></section>
+    </div>
+
+    <aside class="side">
+      <div class="price-box">
+        <small id="opLabel"></small>
+        <b id="price"></b>
+        <span id="priceAlt"></span>
+        <div class="gc" id="gcRow"><span>Gastos comunes aprox.</span><span id="gc"></span></div>
+      </div>
+      <div class="agent-box">
+        <div class="agent-row"><img id="agImg" src="" alt=""><div><b id="agName"></b><span id="agRole"></span></div></div>
+        <form class="visit-form" id="visitForm">
+          <label>Nombre<input name="nombre" required autocomplete="name"></label>
+          <label>Teléfono<input name="telefono" required inputmode="tel" autocomplete="tel" placeholder="+56 9 ..."></label>
+          <div class="row">
+            <label>Día<input type="date" name="dia" id="vDate" required></label>
+            <label>Horario<select name="hora"><option>Mañana (10–13 h)</option><option>Tarde (15–19 h)</option></select></label>
+          </div>
+          <button class="btn btn-blue block" type="submit"><img src="../../assets/icons/in/calendar-l.png" alt="">Agendar visita</button>
+          <a class="btn btn-line block" id="askWa" target="_blank" rel="noopener"><img src="../../assets/icons/whatsapp-dark.png" alt="">Consultar por WhatsApp</a>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section" style="padding-bottom:0">
+    <div class="sec-head"><div><span class="eyebrow">También te puede interesar</span><h2>Propiedades similares</h2></div><a class="btn btn-line" href="index.html#propiedades">Ver todas</a></div>
+    <div class="grid" id="similar"></div>
+  </section>
+</main>
+
+<footer class="foot" style="margin-top:clamp(72px,9vw,120px)">
+  <div class="wrap"><div class="foot-bottom" style="margin-top:0;border-top:0;padding-top:0"><span>© <span id="year"></span> Altura Propiedades · Corredora ficticia, proyecto de demostración.</span><a href="../../index.html">Diseño y desarrollo: Felipe Antunez Mardones</a></div></div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería">
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar"><img src="../../assets/icons/in/x-l.png" alt=""></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior"><img src="../../assets/icons/in/chevron-left-l.png" alt=""></button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente"><img src="../../assets/icons/in/chevron-right-l.png" alt=""></button>
+  <span class="lb-count" id="lbCount"></span>
+</div>
+<a class="wa-float" data-wa="" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp-badge.png" alt=""></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+<script>
+const p = AP_PROPS.find(x => x.id === Number(new URLSearchParams(location.search).get("id"))) || AP_PROPS[0];
+const ag = AP_AGENTS[p.agent];
+document.title = `${p.title} · ${p.comuna} — Altura Propiedades`;
+$("#crOp").textContent = p.op === "Venta" ? "En venta" : "En arriendo";
+$("#crComuna").textContent = p.comuna;
+$("#tags").innerHTML = `<span class="tag op-${p.op === "Venta" ? "v" : "a"}">${p.op}</span>${p.badge ? `<span class="tag tag-b" style="border:1px solid var(--line)">${p.badge}</span>` : ""}`;
+$("#title").textContent = p.title;
+$("#loc").textContent = `${p.comuna}, Santiago · ${p.type}`;
+$("#desc").textContent = p.description;
+$("#feat").innerHTML = p.features.map(f => `<li><img src="${II}check-a.png" alt="">${f}</li>`).join("");
+
+/* Galería */
+$("#mosaic").innerHTML = `<button data-i="0" aria-label="Ver foto 1"><img src="${p.images[0]}" alt="${p.title}"></button>
+  <div class="mosaic-sub">${p.images.slice(1, 3).map((s, i) => `<button data-i="${i + 1}" aria-label="Ver foto ${i + 2}"><img src="${s}" alt=""></button>`).join("")}</div>
+  <span class="all"><img src="${II}camera-d.png" alt="">${p.images.length} fotos</span>`;
+let li = 0;
+const lbShow = i => { li = (i + p.images.length) % p.images.length; $("#lbImg").src = p.images[li]; $("#lbImg").alt = `${p.title}, foto ${li + 1}`; $("#lbCount").textContent = `${li + 1} / ${p.images.length}`; };
+$("#mosaic").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (!b) return; lbShow(Number(b.dataset.i)); $("#lb").classList.add("open"); document.body.classList.add("locked"); });
+const lbClose = () => { $("#lb").classList.remove("open"); document.body.classList.remove("locked"); };
+$("#lbClose").onclick = lbClose; $("#lbPrev").onclick = () => lbShow(li - 1); $("#lbNext").onclick = () => lbShow(li + 1);
+$("#lb").addEventListener("click", e => { if (e.target.id === "lb") lbClose(); });
+document.addEventListener("keydown", e => { if (!$("#lb").classList.contains("open")) return; if (e.key === "Escape") lbClose(); if (e.key === "ArrowLeft") lbShow(li - 1); if (e.key === "ArrowRight") lbShow(li + 1); });
+
+/* Datos clave y ficha */
+const ks = [["ruler", `${p.m2} m²`, "Útiles"], ["maximize", `${p.m2t} m²`, p.type === "Casa" ? "Terreno" : "Totales"], ["bed-double", p.dorms, "Dormitorios"], ["bath", p.baths, "Baños"], ["car", p.parking, "Estacionam."]];
+$("#keyspecs").innerHTML = ks.map(([ic, v, l]) => `<div><img src="${II}${ic}-a.png" alt=""><b>${v}</b><span>${l}</span></div>`).join("");
+const rows = [["Operación", p.op], ["Tipo", p.type], ["Comuna", p.comuna], ["Superficie útil", p.m2 + " m²"], [p.type === "Casa" ? "Terreno" : "Superficie total", p.m2t + " m²"], ["Dormitorios", p.dorms], ["Baños", p.baths], ["Estacionamientos", p.parking], ["Año de construcción", p.year], ["Código", "AP-" + String(p.id).padStart(4, "0")]];
+if (p.gc) rows.push(["Gastos comunes", clp(p.gc)]);
+$("#tbl").innerHTML = rows.map(([a, b]) => `<tr><td>${a}</td><td>${b}</td></tr>`).join("");
+
+/* Precio */
+$("#opLabel").textContent = p.op === "Venta" ? "Precio de venta" : "Arriendo mensual";
+$("#price").textContent = priceMain(p);
+$("#priceAlt").textContent = priceAlt(p);
+if (p.gc) $("#gc").textContent = clp(p.gc); else $("#gcRow").hidden = true;
+
+/* Simulador (solo venta) */
+if (p.op !== "Venta") $("#calcBlock").hidden = true;
+else {
+  $("#ufv").textContent = clp(AP.uf);
+  const calc = () => {
+    const pie = Number($("#pie").value), anos = Number($("#anos").value), tasa = Number($("#tasa").value);
+    $("#oPie").textContent = pie + "%"; $("#oAnos").textContent = anos + " años"; $("#oTasa").textContent = String(tasa).replace(".", ",") + "%";
+    const cred = p.price * (1 - pie / 100), r = tasa / 100 / 12, n = anos * 12;
+    const div = cred * r / (1 - Math.pow(1 + r, -n));
+    $("#rDiv").textContent = clp(div * AP.uf); $("#rPie").textContent = uf(p.price * pie / 100); $("#rCred").textContent = uf(cred);
+  };
+  ["#pie", "#anos", "#tasa"].forEach(s => $(s).addEventListener("input", calc)); calc();
+}
+
+/* Mapa */
+$("#map").src = `https://maps.google.com/maps?q=${encodeURIComponent(p.comuna.replace(/ \(.*\)/, "") + ", Santiago, Chile")}&z=13&output=embed`;
+
+/* Corredor y visita */
+$("#agImg").src = API + ag.img; $("#agImg").alt = ag.name; $("#agName").textContent = ag.name; $("#agRole").textContent = ag.role;
+const ref = `${p.title} (AP-${String(p.id).padStart(4, "0")}), ${p.comuna}`;
+$("#askWa").href = apWa(`Hola ${ag.name.split(" ")[0]}, me interesa la propiedad: ${ref}. ¿Sigue disponible?`);
+const t = new Date(); t.setDate(t.getDate() + 1);
+$("#vDate").min = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, "0")}-${String(t.getDate()).padStart(2, "0")}`;
+$("#visitForm").addEventListener("submit", e => {
+  e.preventDefault(); const f = Object.fromEntries(new FormData(e.target));
+  const dia = new Date(f.dia + "T12:00").toLocaleDateString("es-CL", { weekday: "long", day: "numeric", month: "long" });
+  window.open(apWa(`Hola ${ag.name.split(" ")[0]}, quiero agendar una visita.\n\nPropiedad: ${ref}\nDía: ${dia}\nHorario: ${f.hora}\n\nNombre: ${f.nombre}\nTeléfono: ${f.telefono}`), "_blank", "noopener");
+});
+
+/* Favorito y compartir */
+const favBtn = $("#favBig"); favBtn.dataset.fav = p.id; favBtn.classList.toggle("on", favs.includes(p.id));
+const syncFavIcon = () => favBtn.querySelector("img").src = `${II}heart-${favs.includes(p.id) ? "l" : "d"}.png`;
+syncFavIcon(); favBtn.addEventListener("click", () => setTimeout(syncFavIcon));
+$("#share").addEventListener("click", async () => { try { if (navigator.share) await navigator.share({ title: p.title, url: location.href }); else { await navigator.clipboard.writeText(location.href); toast("Enlace copiado"); } } catch {} });
+
+/* Similares */
+const sim = AP_PROPS.filter(x => x.id !== p.id).sort((a, b) => (b.op === p.op) - (a.op === p.op) || (b.type === p.type) - (a.type === p.type)).slice(0, 3);
+$("#similar").innerHTML = sim.map(propCard).join("");
+</script>
+</body>
+</html>
